@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2015.4.1 (64-bit)
+# SW Build 1431336 on Fri Dec 11 14:52:45 MST 2015
+# IP Build 1427053 on Mon Dec  7 12:56:29 MST 2015
+# Start of session at: Fri Mar 04 11:56:59 2016
+# Process ID: 7024
+# Current directory: D:/flyback_controller/hls/PI_compensator/dbg_mode/impl/ip
+# Command line: wbtcv.exe -mode batch -source D:/flyback_controller/hls/PI_compensator/dbg_mode/impl/ip/tmp.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: D:/flyback_controller/hls/PI_compensator/dbg_mode/impl/ip/webtalk.log
+# Journal file: D:/flyback_controller/hls/PI_compensator/dbg_mode/impl/ip\webtalk.jou
+#-----------------------------------------------------------
+source D:/flyback_controller/hls/PI_compensator/dbg_mode/impl/ip/tmp.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Mar 04 11:56:59 2016...

@@ -1,0 +1,396 @@
+
+{
+  'fileSets' => [
+    {
+      'files' => [
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/digital_compensator_dmul_64ns_64ns_64_6_max_dsp.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/digital_compensator_faddfsub_32ns_32ns_32_5_full_dsp.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/digital_compensator_fcmp_32ns_32ns_1_1.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/digital_compensator_fmul_32ns_32ns_32_4_max_dsp.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/digital_compensator_fptrunc_64ns_32_1.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/digital_compensator_sitodp_32ns_64_6.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/digital_compensator.v'
+        }
+      ],
+      'name' => 'vivado_hls_sim_verilog_fileset'
+    },
+    {
+      'files' => [
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/digital_compensator_dmul_64ns_64ns_64_6_max_dsp.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/digital_compensator_faddfsub_32ns_32ns_32_5_full_dsp.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/digital_compensator_fcmp_32ns_32ns_1_1.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/digital_compensator_fmul_32ns_32ns_32_4_max_dsp.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/digital_compensator_fptrunc_64ns_32_1.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/digital_compensator_sitodp_32ns_64_6.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/digital_compensator.vhd'
+        }
+      ],
+      'name' => 'vivado_hls_sim_vhdl_fileset'
+    },
+    {
+      'files' => [
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/digital_compensator_ap_dmul_4_max_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/digital_compensator_ap_faddfsub_3_full_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/digital_compensator_ap_fcmp_0_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/digital_compensator_ap_fmul_2_max_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/digital_compensator_ap_fptrunc_0_no_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/digital_compensator_ap_sitodp_4_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'digital_compensator_dmul_64ns_64ns_64_6_max_dsp',
+          'name' => 'verilog_impl/digital_compensator_dmul_64ns_64ns_64_6_max_dsp.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'digital_compensator_faddfsub_32ns_32ns_32_5_full_dsp',
+          'name' => 'verilog_impl/digital_compensator_faddfsub_32ns_32ns_32_5_full_dsp.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'digital_compensator_fcmp_32ns_32ns_1_1',
+          'name' => 'verilog_impl/digital_compensator_fcmp_32ns_32ns_1_1.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'digital_compensator_fmul_32ns_32ns_32_4_max_dsp',
+          'name' => 'verilog_impl/digital_compensator_fmul_32ns_32ns_32_4_max_dsp.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'digital_compensator_fptrunc_64ns_32_1',
+          'name' => 'verilog_impl/digital_compensator_fptrunc_64ns_32_1.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'digital_compensator_sitodp_32ns_64_6',
+          'name' => 'verilog_impl/digital_compensator_sitodp_32ns_64_6.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/digital_compensator.v'
+        }
+      ],
+      'name' => 'vivado_hls_impl_verilog_fileset'
+    },
+    {
+      'files' => [
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/digital_compensator_ap_dmul_4_max_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/digital_compensator_ap_faddfsub_3_full_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/digital_compensator_ap_fcmp_0_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/digital_compensator_ap_fmul_2_max_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/digital_compensator_ap_fptrunc_0_no_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/digital_compensator_ap_sitodp_4_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/digital_compensator_dmul_64ns_64ns_64_6_max_dsp.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/digital_compensator_faddfsub_32ns_32ns_32_5_full_dsp.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/digital_compensator_fcmp_32ns_32ns_1_1.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/digital_compensator_fmul_32ns_32ns_32_4_max_dsp.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/digital_compensator_fptrunc_64ns_32_1.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/digital_compensator_sitodp_32ns_64_6.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/digital_compensator.vhd'
+        }
+      ],
+      'name' => 'vivado_hls_impl_vhdl_fileset'
+    }
+  ],
+  'DesignConstraint' => {
+      'clk_period' => '10.000000'
+  },
+  'library' => 'VIVADO_HLS',
+  'model' => {
+    'modelParameters'=>{
+        'combinational' => '0',
+        'latency' => '33',
+        'II' => 'x'
+    },
+    'ports' => [
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'in',
+        'left' => '0',
+        'name' => 'ap_clk',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'in',
+        'left' => '0',
+        'name' => 'ap_rst',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'in',
+        'left' => '0',
+        'name' => 'ap_start',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'out',
+        'left' => '0',
+        'name' => 'ap_done',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'out',
+        'left' => '0',
+        'name' => 'ap_idle',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'out',
+        'left' => '0',
+        'name' => 'ap_ready',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '24',
+          'type' => 'Floating-point'
+        },
+        'direction' => 'in',
+        'left' => '31',
+        'name' => 'v_ref',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'Unsigned'
+        },
+        'direction' => 'in',
+        'left' => '11',
+        'name' => 'v_meas',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '24',
+          'type' => 'Floating-point'
+        },
+        'direction' => 'in',
+        'left' => '31',
+        'name' => 'Kp',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '24',
+          'type' => 'Floating-point'
+        },
+        'direction' => 'in',
+        'left' => '31',
+        'name' => 'Ki2',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'Unsigned'
+        },
+        'direction' => 'out',
+        'left' => '9',
+        'name' => 'u',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      }
+    ],
+    'views' => [
+      {
+        'envIdentifier' => 'verilogSource:sysgen.xilinx.com:synthesis',
+        'fileSetRef' => {
+          'localName' => 'vivado_hls_impl_verilog_fileset'
+        },
+        'language' => 'VERILOG',
+        'name' => 'xilinx_verilogsynthesis'
+      },
+      {
+        'envIdentifier' => 'vhdlSource:sysgen.xilinx.com:synthesis',
+        'fileSetRef' => {
+          'localName' => 'vivado_hls_impl_vhdl_fileset'
+        },
+        'language' => 'VHDL',
+        'name' => 'xilinx_vhdlsynthesis'
+      },
+      {
+        'envIdentifier' => 'verilogSource:sysgen.xilinx.com:synthesis',
+        'fileSetRef' => {
+          'localName' => 'vivado_hls_sim_verilog_fileset'
+        },
+        'language' => 'VERILOG',
+        'name' => 'xilinx_verilogsimulation'
+      },
+      {
+        'envIdentifier' => 'vhdlSource:sysgen.xilinx.com:synthesis',
+        'fileSetRef' => {
+          'localName' => 'vivado_hls_sim_vhdl_fileset'
+        },
+        'language' => 'VHDL',
+        'name' => 'xilinx_vhdlsimulation'
+      }
+    ]
+  },
+  'name' => 'digital_compensator',
+  'vendor' => 'xilinx.com',
+  'version' => '1.0'
+}

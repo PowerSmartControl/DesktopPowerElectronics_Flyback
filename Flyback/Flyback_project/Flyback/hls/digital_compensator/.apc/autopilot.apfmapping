@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="digital_compensator.c" path="D:\Projects\flyback\hls\digital_compensator\digital_compensator.c"/>
+  </source>
+  <testbench>
+    <originFiles name="digital_compensator_tb.c" path="D:\Projects\flyback\hls\digital_compensator\digital_compensator_tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'y_1' is power-on initialization." projectName="digital_compensator" solutionName="dbg_mode" date="2016-06-15T16:27:54.702+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'e_2' is power-on initialization." projectName="digital_compensator" solutionName="dbg_mode" date="2016-06-15T16:27:54.686+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'e_1' is power-on initialization." projectName="digital_compensator" solutionName="dbg_mode" date="2016-06-15T16:27:54.670+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'u' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="digital_compensator" solutionName="dbg_mode" date="2016-06-15T16:27:54.655+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="dbg_mode" date="2016-06-15T16:27:41.431+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="dbg_mode" date="2016-06-15T16:27:39.890+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="dbg_mode" date="2016-06-15T16:27:39.858+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="dbg_mode" date="2016-06-15T16:27:39.843+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="dbg_mode" date="2016-06-15T16:27:39.827+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="dbg_mode" date="2016-06-15T16:27:39.806+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="dbg_mode" date="2016-06-15T16:27:39.789+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="dbg_mode" date="2016-06-15T16:27:39.773+0200" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'Dig_compensator/params_a_0' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:37.019+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'e_3' is power-on initialization." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:37.009+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'e_2' is power-on initialization." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:36.999+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'e_1' is power-on initialization." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:36.989+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'y_2' is power-on initialization." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:36.980+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'y_1' is power-on initialization." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:36.970+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'y_3' is power-on initialization." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:36.961+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'u' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:36.951+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Variable 'yVmeasDbg' is not declared in 'Dig_compensator'." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:27.663+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Variable 'uDbg' is not declared in 'Dig_compensator'." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:27.185+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Variable 'eDbg' is not declared in 'Dig_compensator'." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:27.175+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Variable 'yDbg' is not declared in 'Dig_compensator'." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:27.167+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:27.158+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:27.150+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:27.112+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:27.102+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:27.092+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:27.082+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:27.074+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'digital_compensator' does not exist in any synthesis source file." projectName="digital_compensator" solutionName="psim" date="2016-02-26T22:36:27.065+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'x_integral' is power-on initialization." projectName="digital_compensator" solutionName="solution1" date="2016-02-15T19:54:26.271+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'sat' is power-on initialization." projectName="digital_compensator" solutionName="solution1" date="2016-02-15T19:54:26.227+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'u' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="digital_compensator" solutionName="solution1" date="2016-02-15T19:54:26.219+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'x_integral' is power-on initialization." projectName="digital_compensator" solutionName="sysgen_test" date="2016-02-08T22:52:53.480+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'sat' is power-on initialization." projectName="digital_compensator" solutionName="sysgen_test" date="2016-02-08T22:52:53.458+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'u' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="digital_compensator" solutionName="sysgen_test" date="2016-02-08T22:52:53.458+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

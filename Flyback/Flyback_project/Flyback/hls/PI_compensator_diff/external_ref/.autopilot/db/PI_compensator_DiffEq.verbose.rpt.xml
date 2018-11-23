@@ -1,0 +1,177 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'PI_compensator_DiffEq'" level="0">
+<item name = "Date">Tue Mar 15 11:14:01 2016
+</item>
+<item name = "Version">2015.4 (Build 1412921 on Wed Nov 18 09:58:55 AM 2015)</item>
+<item name = "Project">PI_compensator_diff</item>
+<item name = "Solution">external_ref</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z010clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.61, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">28, 28, 29, 29, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 388</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">0, 8, 1149, 2225</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 191</column>
+<column name="Register">-, -, 342, -</column>
+<specialColumn name="Available">120, 80, 35200, 17600</specialColumn>
+<specialColumn name="Utilization (%)">0, 10, 4, 15</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="PI_compensator_DiffEq_AXILiteS_s_axi_U">PI_compensator_DiffEq_AXILiteS_s_axi, 0, 0, 252, 400</column>
+<column name="PI_compensator_DiffEq_faddfsub_32ns_32ns_32_5_full_dsp_U0">PI_compensator_DiffEq_faddfsub_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
+<column name="PI_compensator_DiffEq_fcmp_32ns_32ns_1_1_U4">PI_compensator_DiffEq_fcmp_32ns_32ns_1_1, 0, 0, 66, 239</column>
+<column name="PI_compensator_DiffEq_fmul_32ns_32ns_32_4_max_dsp_U1">PI_compensator_DiffEq_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
+<column name="PI_compensator_DiffEq_fmul_32ns_32ns_32_4_max_dsp_U2">PI_compensator_DiffEq_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
+<column name="PI_compensator_DiffEq_sitofp_32ns_32_6_U3">PI_compensator_DiffEq_sitofp_32ns_32_6, 0, 0, 340, 554</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="sh_assign_fu_379_p2">+, 0, 0, 9, 8, 9</column>
+<column name="tmp_4_i_i_fu_393_p2">-, 0, 0, 8, 7, 8</column>
+<column name="sh_assign_1_fu_403_p3">Select, 0, 0, 9, 1, 9</column>
+<column name="tmp_22_fu_456_p3">Select, 0, 0, 10, 1, 10</column>
+<column name="tmp_5_fu_244_p3">Select, 0, 0, 32, 1, 32</column>
+<column name="x_assign_fu_333_p3">Select, 0, 0, 32, 1, 32</column>
+<column name="tmp_10_fu_238_p2">and, 0, 0, 1, 1, 1</column>
+<column name="tmp_17_fu_323_p2">and, 0, 0, 1, 1, 1</column>
+<column name="tmp_19_fu_329_p2">and, 0, 0, 1, 1, 1</column>
+<column name="notlhs3_fu_287_p2">icmp, 0, 0, 3, 8, 2</column>
+<column name="notlhs5_fu_305_p2">icmp, 0, 0, 3, 8, 2</column>
+<column name="notlhs_fu_220_p2">icmp, 0, 0, 3, 8, 2</column>
+<column name="notrhs4_fu_293_p2">icmp, 0, 0, 8, 23, 1</column>
+<column name="notrhs6_fu_311_p2">icmp, 0, 0, 8, 23, 1</column>
+<column name="notrhs_fu_226_p2">icmp, 0, 0, 8, 23, 1</column>
+<column name="tmp_7_i_i_fu_423_p2">lshr, 0, 0, 63, 24, 24</column>
+<column name="tmp_15_fu_299_p2">or, 0, 0, 1, 1, 1</column>
+<column name="tmp_16_fu_317_p2">or, 0, 0, 1, 1, 1</column>
+<column name="tmp_8_fu_232_p2">or, 0, 0, 1, 1, 1</column>
+<column name="tmp_9_i_i_fu_429_p2">shl, 0, 0, 186, 62, 62</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">24, 30, 1, 30</column>
+<column name="grp_fu_149_opcode">2, 3, 2, 6</column>
+<column name="grp_fu_149_p0">32, 4, 32, 128</column>
+<column name="grp_fu_149_p1">32, 4, 32, 128</column>
+<column name="grp_fu_164_p0">32, 3, 32, 96</column>
+<column name="grp_fu_167_opcode">5, 3, 5, 15</column>
+<column name="grp_fu_167_p0">32, 3, 32, 96</column>
+<column name="grp_fu_167_p1">32, 3, 32, 96</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="X_MAX_read_reg_498">10, 0, 10, 0</column>
+<column name="ap_CS_fsm">29, 0, 29, 0</column>
+<column name="e0">32, 0, 32, 0</column>
+<column name="e0_loc_reg_481">32, 0, 32, 0</column>
+<column name="isNeg_reg_555">1, 0, 1, 0</column>
+<column name="reg_172">32, 0, 32, 0</column>
+<column name="tmp_10_reg_528">1, 0, 1, 0</column>
+<column name="tmp_17_reg_545">1, 0, 1, 0</column>
+<column name="tmp_18_reg_550">1, 0, 1, 0</column>
+<column name="tmp_1_reg_513">32, 0, 32, 0</column>
+<column name="tmp_21_reg_565">10, 0, 10, 0</column>
+<column name="tmp_25_reg_560">1, 0, 1, 0</column>
+<column name="tmp_5_reg_540">32, 0, 32, 0</column>
+<column name="tmp_6_reg_533">32, 0, 32, 0</column>
+<column name="tmp_s_reg_508">32, 0, 32, 0</column>
+<column name="x0">32, 0, 32, 0</column>
+<column name="y_reg_469">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_AXILiteS_AWVALID">in, 1, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_AWREADY">out, 1, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_AWADDR">in, 7, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_WVALID">in, 1, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_WREADY">out, 1, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_WDATA">in, 32, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_WSTRB">in, 4, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_ARVALID">in, 1, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_ARREADY">out, 1, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_ARADDR">in, 7, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_RVALID">out, 1, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_RREADY">in, 1, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_RDATA">out, 32, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_RRESP">out, 2, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_BVALID">out, 1, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_BREADY">in, 1, s_axi, AXILiteS, pointer</column>
+<column name="s_axi_AXILiteS_BRESP">out, 2, s_axi, AXILiteS, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, PI_compensator_DiffEq, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, PI_compensator_DiffEq, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, PI_compensator_DiffEq, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, PI_compensator_DiffEq, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, PI_compensator_DiffEq, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, PI_compensator_DiffEq, return value</column>
+<column name="v_ref">in, 32, ap_none, v_ref, scalar</column>
+<column name="v_meas">in, 12, ap_none, v_meas, scalar</column>
+<column name="u">out, 10, ap_none, u, pointer</column>
+</table>
+</item>
+</section>
+</profile>

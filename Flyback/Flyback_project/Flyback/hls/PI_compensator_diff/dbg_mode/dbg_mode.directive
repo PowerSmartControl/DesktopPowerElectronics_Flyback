@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+  <sourceFile>
+    <directive functionName="PI_compensator" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value="" positionalBoolean="mode"/>
+        <option name="port" value="v_ref" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value="" positionalBoolean="mode"/>
+        <option name="port" value="Kp" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value="" positionalBoolean="mode"/>
+        <option name="port" value="Ki2" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="ap_none" value="" positionalBoolean="mode"/>
+        <option name="port" value="u" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value="" positionalBoolean="mode"/>
+        <option name="port" value="yVmeasDbg" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value="" positionalBoolean="mode"/>
+        <option name="port" value="yDbg" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value="" positionalBoolean="mode"/>
+        <option name="port" value="eDbg" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value="" positionalBoolean="mode"/>
+        <option name="port" value="uDbg" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator_DiffEq" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="ap_none" value="" positionalBoolean="mode"/>
+        <option name="port" value="u" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator_DiffEq" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value="" positionalBoolean="mode"/>
+        <option name="port" value="yDbg" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator_DiffEq" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value="" positionalBoolean="mode"/>
+        <option name="port" value="uDbg" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator_DiffEq" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value="" positionalBoolean="mode"/>
+        <option name="port" value="eDbg" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator_DiffEq" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value="" positionalBoolean="mode"/>
+        <option name="port" value="yVmeasDbg" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator_DiffEq" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value="" positionalBoolean="mode"/>
+        <option name="port" value="v_ref" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator_DiffEq" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="ap_none" value="" positionalBoolean="mode"/>
+        <option name="port" value="v_meas" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="PI_compensator_DiffEq" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value="" positionalBoolean="mode"/>
+        <option name="port" value="X_MAX" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+  </sourceFile>
+  <sourceFile name="PI_compensator_diff/PI_compensator_DiffEq.c">
+    <directive functionName="PI_compensator_DiffEq" label=" " functionLabel=" ">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value=" " positionalBoolean="mode"/>
+        <option name="port" value="coef" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+  </sourceFile>
+</AutoPilot:ProjectResources>

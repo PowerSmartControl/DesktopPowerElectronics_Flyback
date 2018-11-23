@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="20000000001fs"></ZoomEndTime>
+      <Cursor1Time time="11626667000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/testbench/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/clk_div" type="logic">
+      <obj_property name="ElementShortName">clk_div</obj_property>
+      <obj_property name="ObjectShortName">clk_div</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/nRST" type="logic">
+      <obj_property name="ElementShortName">nRST</obj_property>
+      <obj_property name="ObjectShortName">nRST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/current_state" type="other">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/shiftCounter" type="array">
+      <obj_property name="ElementShortName">shiftCounter[3:0]</obj_property>
+      <obj_property name="ObjectShortName">shiftCounter[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/SCLK" type="logic">
+      <obj_property name="ElementShortName">SCLK</obj_property>
+      <obj_property name="ObjectShortName">SCLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/nCS" type="logic">
+      <obj_property name="ElementShortName">nCS</obj_property>
+      <obj_property name="ObjectShortName">nCS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/SDATA" type="logic">
+      <obj_property name="ElementShortName">SDATA</obj_property>
+      <obj_property name="ObjectShortName">SDATA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/DATA" type="array">
+      <obj_property name="ElementShortName">DATA[11:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/START" type="logic">
+      <obj_property name="ElementShortName">START</obj_property>
+      <obj_property name="ObjectShortName">START</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/DONE" type="logic">
+      <obj_property name="ElementShortName">DONE</obj_property>
+      <obj_property name="ObjectShortName">DONE</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="PI_compensator_DiffEq" xd:componentRef="PI_compensator_DiffEq" xd:initiationInterval="29" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="v_ref" xd:originalName="v_ref" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="v_meas" xd:originalName="v_meas" xd:direction="in" xd:interfaceRef="v_meas" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="12"/>
+  <xd:arg xd:name="X_MAX" xd:originalName="X_MAX" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:dataWidth="10" xd:offset="0x18" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="b0" xd:originalName="b0" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:dataWidth="32" xd:offset="0x20" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="b1" xd:originalName="b1" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:dataWidth="32" xd:offset="0x28" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="*(u)" xd:originalName="u" xd:direction="out" xd:interfaceRef="u" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:arg xd:name="*(yVmeasDbg)" xd:originalName="yVmeasDbg" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:dataWidth="32" xd:offset="0x30" xd:statusOffset="0x34" xd:handshakeRef="ap_vld"/>
+  <xd:arg xd:name="*(yDbg)" xd:originalName="yDbg" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:dataWidth="32" xd:offset="0x38" xd:statusOffset="0x3C" xd:handshakeRef="ap_vld"/>
+  <xd:arg xd:name="*(eDbg)" xd:originalName="eDbg" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:dataWidth="32" xd:offset="0x40" xd:statusOffset="0x44" xd:handshakeRef="ap_vld"/>
+  <xd:arg xd:name="*(uDbg)" xd:originalName="uDbg" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:dataWidth="10" xd:offset="0x48" xd:statusOffset="0x4C" xd:handshakeRef="ap_vld"/>
+  <xd:latencyEstimates xd:best-case="28" xd:worst-case="28" xd:average-case="28"/>
+  <xd:resourceEstimates xd:LUT="2868" xd:FF="1593" xd:BRAM="0" xd:DSP="8"/>
+</xd:acceleratorMap>

@@ -1,0 +1,1 @@
+lappend pragmaStatus0 {pragma "INTERFACE" source "D:/flyback_controller/hls/digital_compensator/digital_compensator.c" location "digital_compensator" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}

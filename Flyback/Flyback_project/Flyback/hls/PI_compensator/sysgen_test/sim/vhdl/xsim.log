@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# xsim v2015.4.1 (64-bit)
+# SW Build 1431336 on Fri Dec 11 14:52:45 MST 2015
+# IP Build 1427053 on Mon Dec  7 12:56:29 MST 2015
+# Start of session at: Mon Feb 08 20:57:03 2016
+# Process ID: 7500
+# Current directory: D:/flyback_controller/hls/digital_compensator/sysgen_test/sim/vhdl
+# Command line: xsim.exe -mode tcl -source {xsim.dir/digital_compensator/xsim_script.tcl}
+# Log file: D:/flyback_controller/hls/digital_compensator/sysgen_test/sim/vhdl/xsim.log
+# Journal file: D:/flyback_controller/hls/digital_compensator/sysgen_test/sim/vhdl\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/digital_compensator/xsim_script.tcl
+# xsim {digital_compensator} -maxdeltaid 10000 -autoloadwcfg -tclbatch {digital_compensator.tcl}
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source digital_compensator.tcl
+## run all
+Note: 
+******************************************************
+  renorm_and_round_logic.vhd :
+    FULL_MANT_RND1_DEL is using fast_input
+    which will be faster, but create more FFs.
+******************************************************
+Time: 0 ps  Iteration: 0
+Note: 
+******************************************************
+  renorm_and_round_logic.vhd :
+    FULL_MANT_RND1_DEL is using fast_input
+    which will be faster, but create more FFs.
+******************************************************
+Time: 0 ps  Iteration: 0
+Note: simulation done!
+Time: 20575 ns  Iteration: 1  Process: /apatb_digital_compensator_top/generate_sim_done_proc  File: D:/flyback_controller/hls/digital_compensator/sysgen_test/sim/vhdl/digital_compensator.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 20575 ns  Iteration: 1  Process: /apatb_digital_compensator_top/generate_sim_done_proc  File: D:/flyback_controller/hls/digital_compensator/sysgen_test/sim/vhdl/digital_compensator.autotb.vhd
+$finish called at time : 20575 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Feb 08 20:57:09 2016...

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [RTGEN-101] Register 'x_integral' is power-on initialization." projectName="PI_compensator" solutionName="dbg_mode" date="2016-03-04T11:48:12.055+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'sat' is power-on initialization." projectName="PI_compensator" solutionName="dbg_mode" date="2016-03-04T11:48:12.008+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'u' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="PI_compensator" solutionName="dbg_mode" date="2016-03-04T11:48:11.993+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'x_integral' is power-on initialization." projectName="digital_compensator" solutionName="solution1" date="2016-02-15T19:54:26.271+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'sat' is power-on initialization." projectName="digital_compensator" solutionName="solution1" date="2016-02-15T19:54:26.227+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'u' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="digital_compensator" solutionName="solution1" date="2016-02-15T19:54:26.219+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'x_integral' is power-on initialization." projectName="digital_compensator" solutionName="sysgen_test" date="2016-02-08T22:52:53.480+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'sat' is power-on initialization." projectName="digital_compensator" solutionName="sysgen_test" date="2016-02-08T22:52:53.458+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'u' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="digital_compensator" solutionName="sysgen_test" date="2016-02-08T22:52:53.458+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

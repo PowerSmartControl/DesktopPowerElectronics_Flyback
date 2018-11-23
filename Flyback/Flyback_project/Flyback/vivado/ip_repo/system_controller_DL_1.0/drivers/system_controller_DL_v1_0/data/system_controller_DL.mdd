@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER system_controller_DL
+	OPTION supported_peripherals = (system_controller_DL);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = system_controller_DL;
+END DRIVER

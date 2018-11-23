@@ -1,0 +1,1416 @@
+01:08:54 INFO  : Launching XSDB server: xsdb.bat -interactive D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\temp_xsdb_launch_script.tcl
+01:08:56 INFO  : XSDB server has started successfully.
+01:08:56 INFO  : Processing command line option -hwspec D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf.
+01:44:49 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1466120601347,  Project:1466115605262
+01:44:49 INFO  : Project top_design_wrapper_hw_platform_0's source hardware specification located at D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+01:44:58 INFO  : Copied contents of D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf into \top_design_wrapper_hw_platform_0\system.hdf.
+01:45:05 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+01:45:07 INFO  : 
+01:45:08 INFO  : Updating hardware inferred compiler options for flyback_controller_revA.
+01:45:08 INFO  : Clearing existing target manager status.
+01:45:09 INFO  : Closing and re-opening the MSS file of ther project flyback_controller_v01_bsp
+01:45:10 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+01:45:11 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+01:46:40 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+01:47:11 INFO  : Launching XSDB server: xsdb.bat -interactive D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\temp_xsdb_launch_script.tcl
+01:47:12 INFO  : XSDB server has started successfully.
+01:47:19 INFO  : Processing command line option -hwspec D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf.
+01:47:19 INFO  : Checking for hwspec changes in the project top_design_wrapper_hw_platform_0.
+01:47:43 INFO  : Refreshed build settings on project flyback_controller_revA
+10:19:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:19:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+10:19:34 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+10:21:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+10:21:40 INFO  : 'fpga -state' command is executed.
+10:21:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:21:40 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:21:41 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+10:21:41 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+10:21:41 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+10:21:42 INFO  : 'stop' command is executed.
+10:22:05 INFO  : 'ps7_init' command is executed.
+10:22:05 INFO  : 'ps7_post_config' command is executed.
+10:22:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:22:07 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:22:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:22:09 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:22:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+10:22:09 INFO  : Memory regions updated for context APU
+10:22:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:22:10 INFO  : 'con' command is executed.
+10:22:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+10:29:02 INFO  : Disconnected from the channel tcfchan#1.
+10:29:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+10:29:05 INFO  : 'fpga -state' command is executed.
+10:29:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:29:06 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:29:06 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+10:29:10 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+10:29:11 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+10:29:13 INFO  : 'stop' command is executed.
+10:29:18 ERROR : Cannot flush JTAG server queue. FT_Write failed: io error
+10:29:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+----------------End of Script----------------
+
+10:29:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:29:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+10:29:31 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+10:29:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+10:29:44 INFO  : 'fpga -state' command is executed.
+10:29:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:29:45 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:29:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+10:29:46 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+10:29:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+10:29:47 INFO  : 'stop' command is executed.
+10:30:28 INFO  : 'ps7_init' command is executed.
+10:30:30 INFO  : 'ps7_post_config' command is executed.
+10:30:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:30:32 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:30:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:30:38 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:30:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+10:30:39 INFO  : Memory regions updated for context APU
+10:30:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:30:39 INFO  : 'con' command is executed.
+10:30:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+11:07:54 INFO  : Disconnected from the channel tcfchan#2.
+11:07:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+11:07:55 INFO  : 'fpga -state' command is executed.
+11:07:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:07:55 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:07:55 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+11:07:59 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+11:07:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+11:08:01 INFO  : 'stop' command is executed.
+11:08:20 INFO  : 'ps7_init' command is executed.
+11:08:20 INFO  : 'ps7_post_config' command is executed.
+11:08:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:08:22 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:08:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:08:26 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:08:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+11:08:29 INFO  : Memory regions updated for context APU
+11:08:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:08:29 INFO  : 'con' command is executed.
+11:08:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+11:09:20 INFO  : Disconnected from the channel tcfchan#3.
+11:09:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+11:09:23 INFO  : 'fpga -state' command is executed.
+11:09:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:09:24 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:09:24 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+11:09:28 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+11:09:29 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+11:09:29 INFO  : 'stop' command is executed.
+11:09:49 INFO  : 'ps7_init' command is executed.
+11:09:53 INFO  : 'ps7_post_config' command is executed.
+11:09:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:09:56 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:09:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:10:04 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:10:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+11:10:04 INFO  : Memory regions updated for context APU
+11:10:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:10:04 INFO  : 'con' command is executed.
+11:10:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+12:42:37 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 799 xsdb eval "disconnect tcfchan#4"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:162)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:254)
+13:23:02 INFO  : Launching XSDB server: xsdb.bat -interactive D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\temp_xsdb_launch_script.tcl
+13:23:04 INFO  : XSDB server has started successfully.
+13:23:05 INFO  : Processing command line option -hwspec D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf.
+13:23:05 INFO  : Checking for hwspec changes in the project top_design_wrapper_hw_platform_0.
+13:23:08 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1466162355109,  Project:1466120601347
+13:23:08 INFO  : The hardware specification for project 'top_design_wrapper_hw_platform_0' is different from D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf.
+13:23:08 INFO  : Copied contents of D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf into \top_design_wrapper_hw_platform_0\system.hdf.
+13:23:14 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:23:56 INFO  : 
+13:23:57 INFO  : Updating hardware inferred compiler options for flyback_controller_revA.
+13:23:57 INFO  : Clearing existing target manager status.
+13:26:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:26:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+13:26:11 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+13:26:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+13:26:32 INFO  : 'fpga -state' command is executed.
+13:26:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:26:32 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:26:33 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+13:26:33 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+13:26:33 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+13:26:34 INFO  : 'stop' command is executed.
+13:26:42 INFO  : 'ps7_init' command is executed.
+13:26:42 INFO  : 'ps7_post_config' command is executed.
+13:26:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:26:43 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:26:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:26:45 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:26:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+13:26:46 INFO  : Memory regions updated for context APU
+13:26:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:26:48 INFO  : 'con' command is executed.
+13:26:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+13:53:41 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1466164366164,  Project:1466162355109
+13:53:41 INFO  : Project top_design_wrapper_hw_platform_0's source hardware specification located at D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:53:42 INFO  : Copied contents of D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf into \top_design_wrapper_hw_platform_0\system.hdf.
+13:53:50 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:54:01 INFO  : 
+13:54:02 INFO  : Updating hardware inferred compiler options for flyback_controller_revA.
+13:54:02 INFO  : Clearing existing target manager status.
+13:54:02 INFO  : Closing and re-opening the MSS file of ther project flyback_controller_v01_bsp
+14:02:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:02:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+14:02:35 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+14:02:44 INFO  : Disconnected from the channel tcfchan#1.
+14:02:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+14:02:47 INFO  : 'fpga -state' command is executed.
+14:02:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:02:47 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:02:48 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+14:02:48 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+14:02:48 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+14:02:49 INFO  : 'stop' command is executed.
+14:02:57 INFO  : 'ps7_init' command is executed.
+14:02:57 INFO  : 'ps7_post_config' command is executed.
+14:02:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:02:58 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:02:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:03:01 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:03:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+14:03:01 INFO  : Memory regions updated for context APU
+14:03:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:03:02 INFO  : 'con' command is executed.
+14:03:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+14:13:47 INFO  : Disconnected from the channel tcfchan#2.
+14:13:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+14:13:49 INFO  : 'fpga -state' command is executed.
+14:13:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:13:50 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:13:50 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+14:13:51 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+14:13:51 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+14:13:51 INFO  : 'stop' command is executed.
+14:13:58 INFO  : 'ps7_init' command is executed.
+14:13:58 INFO  : 'ps7_post_config' command is executed.
+14:13:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:13:59 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:14:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:14:01 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:14:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+14:14:02 INFO  : Memory regions updated for context APU
+14:14:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:14:02 INFO  : 'con' command is executed.
+14:14:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+14:26:39 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1466166383367,  Project:1466164366164
+14:26:39 INFO  : Project top_design_wrapper_hw_platform_0's source hardware specification located at D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+14:27:00 INFO  : Copied contents of D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf into \top_design_wrapper_hw_platform_0\system.hdf.
+14:27:06 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:27:10 INFO  : 
+14:27:11 INFO  : Updating hardware inferred compiler options for flyback_controller_revA.
+14:27:11 INFO  : Clearing existing target manager status.
+14:27:11 INFO  : Closing and re-opening the MSS file of ther project flyback_controller_v01_bsp
+14:27:11 INFO  : Closing and re-opening the MSS file of ther project flyback_controller_v01_bsp
+14:27:12 INFO  : Closing and re-opening the MSS file of ther project flyback_controller_v01_bsp
+14:27:13 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+14:27:13 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+14:27:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:27:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+14:27:45 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+14:27:50 INFO  : Disconnected from the channel tcfchan#3.
+14:27:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+14:27:53 INFO  : 'fpga -state' command is executed.
+14:27:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:27:54 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:27:54 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+14:27:55 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+14:27:55 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+14:27:56 INFO  : 'stop' command is executed.
+14:28:02 INFO  : 'ps7_init' command is executed.
+14:28:02 INFO  : 'ps7_post_config' command is executed.
+14:28:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:28:03 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:28:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:28:06 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:28:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+14:28:07 INFO  : Memory regions updated for context APU
+14:28:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:28:08 INFO  : 'con' command is executed.
+14:28:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+17:09:42 INFO  : Disconnected from the channel tcfchan#4.
+17:09:46 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:11:51 INFO  : Launching XSDB server: xsdb.bat -interactive D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\temp_xsdb_launch_script.tcl
+17:11:54 INFO  : XSDB server has started successfully.
+17:11:54 INFO  : Processing command line option -hwspec D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf.
+17:11:54 INFO  : Checking for hwspec changes in the project top_design_wrapper_hw_platform_0.
+17:11:58 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1466176260146,  Project:1466166383367
+17:11:58 INFO  : The hardware specification for project 'top_design_wrapper_hw_platform_0' is different from D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf.
+17:11:58 INFO  : Copied contents of D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf into \top_design_wrapper_hw_platform_0\system.hdf.
+17:12:04 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+17:12:16 INFO  : 
+17:12:16 INFO  : Updating hardware inferred compiler options for flyback_controller_revA.
+17:12:16 INFO  : Clearing existing target manager status.
+17:12:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:13:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+17:13:06 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+17:13:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+17:13:19 INFO  : 'fpga -state' command is executed.
+17:13:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:13:20 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:13:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+17:13:20 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+17:13:21 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+17:13:22 INFO  : 'stop' command is executed.
+17:13:34 INFO  : 'ps7_init' command is executed.
+17:13:34 INFO  : 'ps7_post_config' command is executed.
+17:13:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:13:36 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:13:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:13:38 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:13:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+17:13:38 INFO  : Memory regions updated for context APU
+17:13:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:13:41 INFO  : 'con' command is executed.
+17:13:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+17:14:53 INFO  : Disconnected from the channel tcfchan#1.
+17:14:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+17:14:54 INFO  : 'fpga -state' command is executed.
+17:14:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:14:55 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+17:14:55 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+17:14:58 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+17:15:00 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+17:15:01 INFO  : 'stop' command is executed.
+17:15:39 INFO  : 'ps7_init' command is executed.
+17:15:39 INFO  : 'ps7_post_config' command is executed.
+17:15:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:15:41 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+17:15:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:15:42 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:15:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+17:15:42 INFO  : Memory regions updated for context APU
+17:15:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:15:43 INFO  : 'con' command is executed.
+17:15:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+17:32:41 INFO  : Launching XSDB server: xsdb.bat -interactive D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\temp_xsdb_launch_script.tcl
+17:32:42 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+18:21:06 INFO  : Launching XSDB server: xsdb.bat -interactive D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\temp_xsdb_launch_script.tcl
+18:21:08 INFO  : XSDB server has started successfully.
+18:21:08 INFO  : Processing command line option -hwspec D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf.
+18:21:08 INFO  : Checking for hwspec changes in the project top_design_wrapper_hw_platform_0.
+18:21:11 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1466180428807,  Project:1466176260146
+18:21:11 INFO  : The hardware specification for project 'top_design_wrapper_hw_platform_0' is different from D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf.
+18:21:12 INFO  : Copied contents of D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf into \top_design_wrapper_hw_platform_0\system.hdf.
+18:21:18 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:21:22 INFO  : 
+18:21:23 INFO  : Updating hardware inferred compiler options for flyback_controller_revA.
+18:21:23 INFO  : Clearing existing target manager status.
+18:21:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:21:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+18:21:41 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+18:22:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+18:22:08 INFO  : 'fpga -state' command is executed.
+18:22:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:22:08 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:22:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:22:09 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+18:22:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:22:10 INFO  : 'stop' command is executed.
+18:22:16 INFO  : 'ps7_init' command is executed.
+18:22:16 INFO  : 'ps7_post_config' command is executed.
+18:22:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+18:22:17 INFO  : 'fpga -state' command is executed.
+18:22:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:22:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:22:17 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:22:18 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:22:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:22:19 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:22:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+18:22:19 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:22:19 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+18:22:19 INFO  : Memory regions updated for context APU
+18:22:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:22:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:22:20 INFO  : 'con' command is executed.
+18:22:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+18:22:20 INFO  : 'stop' command is executed.
+18:22:25 INFO  : 'ps7_init' command is executed.
+18:22:25 INFO  : 'ps7_post_config' command is executed.
+18:22:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:22:26 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:22:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:22:27 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:22:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+18:22:28 INFO  : Memory regions updated for context APU
+18:22:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:22:29 INFO  : 'con' command is executed.
+18:22:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+18:23:00 INFO  : Disconnected from the channel tcfchan#1.
+18:23:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+18:23:01 INFO  : 'fpga -state' command is executed.
+18:23:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:23:01 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:23:02 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:23:05 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+18:23:05 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:23:06 INFO  : 'stop' command is executed.
+18:23:13 INFO  : 'ps7_init' command is executed.
+18:23:14 INFO  : 'ps7_post_config' command is executed.
+18:23:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:23:14 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:23:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:23:17 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:23:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+18:23:17 INFO  : Memory regions updated for context APU
+18:23:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:23:19 INFO  : 'con' command is executed.
+18:23:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+18:26:32 INFO  : Disconnected from the channel tcfchan#2.
+18:26:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+18:26:33 INFO  : 'fpga -state' command is executed.
+18:26:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:26:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+18:26:45 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+18:28:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+18:28:08 INFO  : 'fpga -state' command is executed.
+18:28:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:28:09 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:28:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:28:09 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+18:28:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:28:10 INFO  : 'stop' command is executed.
+18:28:16 INFO  : 'ps7_init' command is executed.
+18:28:16 INFO  : 'ps7_post_config' command is executed.
+18:28:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:28:17 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:28:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:28:19 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:28:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+18:28:19 INFO  : Memory regions updated for context APU
+18:28:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:28:19 INFO  : 'con' command is executed.
+18:28:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+18:48:00 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1466182059961,  Project:1466180428807
+18:48:00 INFO  : Project top_design_wrapper_hw_platform_0's source hardware specification located at D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+18:48:31 INFO  : Copied contents of D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf into \top_design_wrapper_hw_platform_0\system.hdf.
+18:48:37 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:48:42 INFO  : 
+18:48:43 INFO  : Updating hardware inferred compiler options for flyback_controller_revA.
+18:48:43 INFO  : Clearing existing target manager status.
+18:48:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:48:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+18:48:57 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+18:49:02 INFO  : Disconnected from the channel tcfchan#3.
+18:49:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+18:49:05 INFO  : 'fpga -state' command is executed.
+18:49:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:49:05 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:49:06 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:49:06 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+18:49:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:49:07 INFO  : 'stop' command is executed.
+18:49:12 INFO  : 'ps7_init' command is executed.
+18:49:13 INFO  : 'ps7_post_config' command is executed.
+18:49:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:49:13 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:49:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:49:15 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:49:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+18:49:15 INFO  : Memory regions updated for context APU
+18:49:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:49:15 INFO  : 'con' command is executed.
+18:49:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+18:49:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:49:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+18:49:48 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+18:49:59 INFO  : Disconnected from the channel tcfchan#4.
+18:49:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+18:49:59 INFO  : 'fpga -state' command is executed.
+18:50:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:50:00 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:50:00 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:50:01 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+18:50:01 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:50:02 INFO  : 'stop' command is executed.
+18:50:08 INFO  : 'ps7_init' command is executed.
+18:50:08 INFO  : 'ps7_post_config' command is executed.
+18:50:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:50:09 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:50:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:50:11 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:50:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+18:50:12 INFO  : Memory regions updated for context APU
+18:50:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:50:12 INFO  : 'con' command is executed.
+18:50:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+18:56:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:56:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+18:56:27 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+18:56:32 INFO  : Disconnected from the channel tcfchan#5.
+18:56:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+18:56:33 INFO  : 'fpga -state' command is executed.
+18:56:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:56:34 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:56:34 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:56:34 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+18:56:35 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+18:56:35 INFO  : 'stop' command is executed.
+18:56:41 INFO  : 'ps7_init' command is executed.
+18:56:41 INFO  : 'ps7_post_config' command is executed.
+18:56:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:56:42 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:56:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:56:44 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:56:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+18:56:44 INFO  : Memory regions updated for context APU
+18:56:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:56:44 INFO  : 'con' command is executed.
+18:56:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+20:16:20 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1466187326032,  Project:1466182059961
+20:16:20 INFO  : Project top_design_wrapper_hw_platform_0's source hardware specification located at D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+20:17:44 INFO  : Copied contents of D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf into \top_design_wrapper_hw_platform_0\system.hdf.
+20:17:50 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:17:55 INFO  : 
+20:17:56 INFO  : Updating hardware inferred compiler options for flyback_controller_revA.
+20:17:56 INFO  : Clearing existing target manager status.
+20:18:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:18:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+20:18:55 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+20:19:09 INFO  : Disconnected from the channel tcfchan#6.
+20:19:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+20:19:12 INFO  : 'fpga -state' command is executed.
+20:19:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:19:12 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:19:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+20:19:13 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+20:19:14 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+20:19:14 INFO  : 'stop' command is executed.
+20:19:20 INFO  : 'ps7_init' command is executed.
+20:19:20 INFO  : 'ps7_post_config' command is executed.
+20:19:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:19:21 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+20:19:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:19:24 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:19:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+20:19:24 INFO  : Memory regions updated for context APU
+20:19:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:19:26 INFO  : 'con' command is executed.
+20:19:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+20:22:33 INFO  : Disconnected from the channel tcfchan#7.
+20:22:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+20:22:34 INFO  : 'fpga -state' command is executed.
+20:22:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:22:34 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:22:35 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+20:22:35 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+20:22:36 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+20:22:36 INFO  : 'stop' command is executed.
+20:22:43 INFO  : 'ps7_init' command is executed.
+20:22:43 INFO  : 'ps7_post_config' command is executed.
+20:22:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:22:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+20:22:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:22:46 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:22:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+20:22:46 INFO  : Memory regions updated for context APU
+20:22:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:22:48 INFO  : 'con' command is executed.
+20:22:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+20:23:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:23:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+20:23:04 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+21:02:09 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1466190090689,  Project:1466187326032
+21:02:09 INFO  : Project top_design_wrapper_hw_platform_0's source hardware specification located at D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+21:02:10 INFO  : Copied contents of D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf into \top_design_wrapper_hw_platform_0\system.hdf.
+21:02:18 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+21:02:23 INFO  : 
+21:02:24 INFO  : Updating hardware inferred compiler options for flyback_controller_revA.
+21:02:24 INFO  : Clearing existing target manager status.
+21:03:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:03:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+21:03:24 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+21:05:16 INFO  : Disconnected from the channel tcfchan#8.
+21:05:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+21:05:19 INFO  : 'fpga -state' command is executed.
+21:05:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:05:20 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:05:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+21:05:20 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+21:05:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+21:05:21 INFO  : 'stop' command is executed.
+21:05:26 INFO  : 'ps7_init' command is executed.
+21:05:26 INFO  : 'ps7_post_config' command is executed.
+21:05:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:05:26 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:05:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:05:28 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:05:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+21:05:28 INFO  : Memory regions updated for context APU
+21:05:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:05:29 INFO  : 'con' command is executed.
+21:05:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+21:40:43 INFO  : Launching XSDB server: xsdb.bat -interactive D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\temp_xsdb_launch_script.tcl
+21:40:44 INFO  : XSDB server has started successfully.
+21:48:06 INFO  : Launching XSDB server: xsdb.bat -interactive D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\temp_xsdb_launch_script.tcl
+21:48:07 INFO  : XSDB server has started successfully.
+16:59:50 WARN  : channel "tcfchan#9" closed
+16:59:53 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:51:51 INFO  : Launching XSDB server: xsdb.bat -interactive D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\temp_xsdb_launch_script.tcl
+12:52:00 INFO  : XSDB server has started successfully.
+12:52:02 INFO  : Processing command line option -hwspec D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf.
+12:52:07 INFO  : Checking for hwspec changes in the project top_design_wrapper_hw_platform_0.
+12:52:07 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1466419793523,  Project:1466190090689
+12:52:07 INFO  : The hardware specification for project 'top_design_wrapper_hw_platform_0' is different from D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf.
+12:52:07 INFO  : Copied contents of D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf into \top_design_wrapper_hw_platform_0\system.hdf.
+12:52:14 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:53:25 INFO  : 
+12:53:29 INFO  : 
+12:53:30 INFO  : Updating hardware inferred compiler options for amp_test.
+12:53:31 INFO  : Updating hardware inferred compiler options for flyback_controller_revA.
+12:53:31 INFO  : Clearing existing target manager status.
+13:03:30 INFO  : Launching XSDB server: xsdb.bat -interactive D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\temp_xsdb_launch_script.tcl
+13:03:32 INFO  : XSDB server has started successfully.
+13:20:20 INFO  : Invoking Bootgen: bootgen -image flyback_controller_revA.bif -arch zynq -o D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\flyback_controller_revA\bootimage\BOOT.bin
+13:20:20 INFO  : Creating new bif file D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\flyback_controller_revA\bootimage\flyback_controller_revA.bif
+13:20:21 INFO  : Bootgen command execution is done.
+13:22:14 INFO  : Invoking Bootgen: bootgen -image flyback_controller_revA.bif -arch zynq -o D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\flyback_controller_revA\bootimage\BOOT.bin -w on
+13:22:15 INFO  : Bootgen command execution is done.
+20:26:08 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:03:09 INFO  : Launching XSDB server: xsdb.bat -interactive D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\temp_xsdb_launch_script.tcl
+16:03:11 INFO  : XSDB server has started successfully.
+16:03:22 INFO  : Processing command line option -hwspec D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper.hdf.
+16:03:25 INFO  : Checking for hwspec changes in the project top_design_wrapper_hw_platform_0.
+12:58:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:58:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+12:58:30 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+12:58:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+12:58:46 INFO  : 'fpga -state' command is executed.
+12:58:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:58:47 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:58:47 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+12:58:47 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+12:58:47 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+12:58:47 INFO  : 'stop' command is executed.
+12:58:48 INFO  : 'ps7_init' command is executed.
+12:58:48 INFO  : 'ps7_post_config' command is executed.
+12:58:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:58:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:58:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:58:49 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:58:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+12:58:49 INFO  : Memory regions updated for context APU
+12:58:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:58:49 INFO  : 'con' command is executed.
+12:58:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+13:40:41 INFO  : Disconnected from the channel tcfchan#1.
+13:40:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+13:40:42 INFO  : 'fpga -state' command is executed.
+13:40:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:40:42 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:40:43 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+13:40:47 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+13:40:48 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+13:40:48 INFO  : 'stop' command is executed.
+13:40:48 INFO  : 'ps7_init' command is executed.
+13:40:48 INFO  : 'ps7_post_config' command is executed.
+13:40:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:40:49 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:40:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:40:49 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:40:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+13:40:50 INFO  : Memory regions updated for context APU
+13:40:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:40:50 INFO  : 'con' command is executed.
+13:40:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+14:02:51 INFO  : Invoking Bootgen: bootgen -image flyback_controller_revA.bif -arch zynq -o D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\flyback_controller_revA\bootimage\BOOT.bin -w on
+14:02:52 INFO  : Bootgen command execution is done.
+14:57:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:57:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+14:57:10 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+14:57:29 INFO  : Disconnected from the channel tcfchan#2.
+14:57:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+14:57:29 INFO  : 'fpga -state' command is executed.
+14:57:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:57:30 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:57:30 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+14:57:35 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+14:57:35 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+14:57:35 INFO  : 'stop' command is executed.
+14:57:36 INFO  : 'ps7_init' command is executed.
+14:57:36 INFO  : 'ps7_post_config' command is executed.
+14:57:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:57:37 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:57:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:57:37 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:57:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+14:57:37 INFO  : Memory regions updated for context APU
+14:57:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:57:38 INFO  : 'con' command is executed.
+14:57:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+15:00:29 INFO  : Disconnected from the channel tcfchan#3.
+15:00:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+15:00:30 INFO  : 'fpga -state' command is executed.
+15:00:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:00:30 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:00:30 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:00:34 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+15:00:34 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:00:34 INFO  : 'stop' command is executed.
+15:00:36 INFO  : 'ps7_init' command is executed.
+15:00:36 INFO  : 'ps7_post_config' command is executed.
+15:00:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:00:36 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:00:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:00:37 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:00:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+15:00:37 INFO  : Memory regions updated for context APU
+15:00:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:00:38 INFO  : 'con' command is executed.
+15:00:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+15:03:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:03:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+15:03:09 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+15:03:17 INFO  : Disconnected from the channel tcfchan#4.
+15:03:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+15:03:18 INFO  : 'fpga -state' command is executed.
+15:03:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:03:18 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:03:18 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:03:22 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+15:03:22 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:03:22 INFO  : 'stop' command is executed.
+15:03:23 INFO  : 'ps7_init' command is executed.
+15:03:23 INFO  : 'ps7_post_config' command is executed.
+15:03:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:03:24 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:03:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:03:25 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:03:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+15:03:25 INFO  : Memory regions updated for context APU
+15:03:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:03:25 INFO  : 'con' command is executed.
+15:03:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+15:07:28 INFO  : Disconnected from the channel tcfchan#5.
+15:07:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+15:07:28 INFO  : 'fpga -state' command is executed.
+15:07:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:07:29 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:07:29 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:07:32 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+15:07:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:07:32 INFO  : 'stop' command is executed.
+15:07:34 INFO  : 'ps7_init' command is executed.
+15:07:34 INFO  : 'ps7_post_config' command is executed.
+15:07:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:07:34 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:07:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:07:35 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:07:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+15:07:35 INFO  : Memory regions updated for context APU
+15:07:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:07:35 INFO  : 'con' command is executed.
+15:07:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+15:09:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:09:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+15:09:02 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+15:09:10 INFO  : Disconnected from the channel tcfchan#6.
+15:09:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+15:09:10 INFO  : 'fpga -state' command is executed.
+15:09:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:09:11 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:09:11 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:09:14 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+15:09:15 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:09:15 INFO  : 'stop' command is executed.
+15:09:16 INFO  : 'ps7_init' command is executed.
+15:09:16 INFO  : 'ps7_post_config' command is executed.
+15:09:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:09:16 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:09:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:09:17 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:09:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+15:09:17 INFO  : Memory regions updated for context APU
+15:09:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:09:17 INFO  : 'con' command is executed.
+15:09:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+15:10:31 INFO  : Disconnected from the channel tcfchan#7.
+15:10:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+15:10:32 INFO  : 'fpga -state' command is executed.
+15:10:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:10:32 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:10:33 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:10:36 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+15:10:36 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:10:36 INFO  : 'stop' command is executed.
+15:10:37 INFO  : 'ps7_init' command is executed.
+15:10:38 INFO  : 'ps7_post_config' command is executed.
+15:10:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:10:38 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:10:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:10:39 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:10:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+15:10:39 INFO  : Memory regions updated for context APU
+15:10:39 ERROR : no targets found with "name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"". available targets:
+  5  whole scan chain (FT_Write failed: io error)
+15:10:39 INFO  : Disconnected from the channel tcfchan#8.
+15:11:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:11:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+15:11:12 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+15:11:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+15:11:53 INFO  : 'fpga -state' command is executed.
+15:11:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:11:54 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:11:54 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:11:54 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+15:11:54 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:11:55 INFO  : 'stop' command is executed.
+15:11:55 INFO  : 'ps7_init' command is executed.
+15:11:55 INFO  : 'ps7_post_config' command is executed.
+15:11:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:11:56 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:11:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:11:56 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:11:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+15:11:56 INFO  : Memory regions updated for context APU
+15:11:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:11:57 INFO  : 'con' command is executed.
+15:11:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+15:17:12 INFO  : Disconnected from the channel tcfchan#9.
+15:17:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+15:17:13 INFO  : 'fpga -state' command is executed.
+15:17:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:17:14 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:17:14 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:17:17 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+15:17:18 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:17:18 INFO  : 'stop' command is executed.
+15:17:19 INFO  : 'ps7_init' command is executed.
+15:17:19 INFO  : 'ps7_post_config' command is executed.
+15:17:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:17:20 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:17:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:17:21 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:17:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+15:17:21 INFO  : Memory regions updated for context APU
+15:17:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:17:21 INFO  : 'con' command is executed.
+15:17:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+15:18:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:18:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+15:18:38 INFO  : FPGA configured successfully with bitstream "D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/top_design_wrapper.bit"
+15:18:44 INFO  : Disconnected from the channel tcfchan#10.
+15:18:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574476A" && level==0} -index 1' command is executed.
+15:18:44 INFO  : 'fpga -state' command is executed.
+15:18:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:18:45 INFO  : Sourcing of 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:18:45 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:18:48 INFO  : Hardware design information is loaded from 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf'.
+15:18:49 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0' command is executed.
+15:18:49 INFO  : 'stop' command is executed.
+15:18:50 INFO  : 'ps7_init' command is executed.
+15:18:50 INFO  : 'ps7_post_config' command is executed.
+15:18:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:18:51 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:18:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:18:52 INFO  : The application 'D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:18:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+loadhw D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/top_design_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+dow D:/flyback_controller/flyback_controller_v01/flyback_controller_v01.sdk/flyback_controller_revA/Debug/flyback_controller_revA.elf
+----------------End of Script----------------
+
+15:18:52 INFO  : Memory regions updated for context APU
+15:18:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:18:52 INFO  : 'con' command is executed.
+15:18:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279574476A"} -index 0
+con
+----------------End of Script----------------
+
+15:25:40 INFO  : Invoking Bootgen: bootgen -image flyback_controller_revA.bif -arch zynq -o D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\flyback_controller_revA\bootimage\BOOT.bin -w on
+15:25:42 INFO  : Bootgen command execution is done.
+21:28:59 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 3605 xsdb eval "disconnect tcfchan#11"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:162)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:254)
+12:43:16 INFO  : Launching XSDB server: xsdb.bat -interactive D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\temp_xsdb_launch_script.tcl
+12:43:18 INFO  : XSDB server has started successfully.

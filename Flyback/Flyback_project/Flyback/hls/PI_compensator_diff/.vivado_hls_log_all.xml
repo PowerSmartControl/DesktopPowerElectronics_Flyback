@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [RTGEN-101] Register 'e0' is power-on initialization." projectName="PI_compensator_diff" solutionName="external_ref" date="2016-03-15T11:14:01.038+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'x0' is power-on initialization." projectName="PI_compensator_diff" solutionName="external_ref" date="2016-03-15T11:14:01.015+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'u' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="PI_compensator_diff" solutionName="external_ref" date="2016-03-15T11:14:01.000+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="external_ref" date="2016-03-15T11:13:53.654+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="external_ref" date="2016-03-15T11:13:53.022+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="external_ref" date="2016-03-15T11:13:53.006+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="external_ref" date="2016-03-15T11:13:52.990+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="external_ref" date="2016-03-15T11:13:52.968+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="external_ref" date="2016-03-15T11:13:52.953+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="external_ref" date="2016-03-15T11:13:52.953+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="external_ref" date="2016-03-15T11:13:52.937+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Cannot find test bench file 'PI_compensator_tb.c'" projectName="PI_compensator_diff" solutionName="external_ref" date="2016-03-15T11:13:49.773+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'e0' is power-on initialization." projectName="PI_compensator_diff" solutionName="dbg_mode" date="2016-03-15T08:08:42.599+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'x0' is power-on initialization." projectName="PI_compensator_diff" solutionName="dbg_mode" date="2016-03-15T08:08:42.547+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'u' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="PI_compensator_diff" solutionName="dbg_mode" date="2016-03-15T08:08:42.517+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="dbg_mode" date="2016-03-15T08:08:29.085+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="dbg_mode" date="2016-03-15T08:08:26.476+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="dbg_mode" date="2016-03-15T08:08:26.444+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="dbg_mode" date="2016-03-15T08:08:26.397+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="dbg_mode" date="2016-03-15T08:08:26.364+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="dbg_mode" date="2016-03-15T08:08:26.317+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="dbg_mode" date="2016-03-15T08:08:26.247+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'INTERFACE' cannot be applied: Function 'PI_compensator' does not exist in any synthesis source file." projectName="PI_compensator_diff" solutionName="dbg_mode" date="2016-03-15T08:08:26.192+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Cannot find test bench file 'PI_compensator_tb.c'" projectName="PI_compensator_diff" solutionName="dbg_mode" date="2016-03-15T08:08:15.506+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'x_integral' is power-on initialization." projectName="digital_compensator" solutionName="solution1" date="2016-02-15T19:54:26.271+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'sat' is power-on initialization." projectName="digital_compensator" solutionName="solution1" date="2016-02-15T19:54:26.227+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'u' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="digital_compensator" solutionName="solution1" date="2016-02-15T19:54:26.219+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'x_integral' is power-on initialization." projectName="digital_compensator" solutionName="sysgen_test" date="2016-02-08T22:52:53.480+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'sat' is power-on initialization." projectName="digital_compensator" solutionName="sysgen_test" date="2016-02-08T22:52:53.458+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Port 'u' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="digital_compensator" solutionName="sysgen_test" date="2016-02-08T22:52:53.458+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

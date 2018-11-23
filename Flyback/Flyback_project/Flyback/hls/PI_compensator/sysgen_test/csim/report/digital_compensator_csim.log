@@ -1,0 +1,55 @@
+   Compiling(apcc) ../../../digital_compensator_tb.c in debug mode
+@I [HLS-10] Running 'c:/Xilinx/Vivado_HLS/2015.4/bin/unwrapped/win64.o/apcc.exe'
+            for user 'Gonzalo' on host 'gonzalouc3m' (Windows NT_amd64 version 6.2) on Mon Feb 08 22:51:51 +0100 2016
+            in directory 'D:/flyback_controller/hls/digital_compensator/sysgen_test/csim/build'
+@I [APCC-3] Tmp directory is apcc_db
+@I [APCC-1] APCC is done.
+   Compiling(apcc) ../../../digital_compensator.c in debug mode
+@I [HLS-10] Running 'c:/Xilinx/Vivado_HLS/2015.4/bin/unwrapped/win64.o/apcc.exe'
+            for user 'Gonzalo' on host 'gonzalouc3m' (Windows NT_amd64 version 6.2) on Mon Feb 08 22:51:53 +0100 2016
+            in directory 'D:/flyback_controller/hls/digital_compensator/sysgen_test/csim/build'
+@I [APCC-3] Tmp directory is apcc_db
+@I [APCC-1] APCC is done.
+   Generating csim.exe
+HW results:
+Vea0 = 1
+Vea1 = 2
+Vea2 = 2
+Vea3 = 2
+Vea4 = 2
+Vea5 = 2
+Vea6 = 3
+Vea7 = 3
+Vea8 = 3
+Vea9 = 3
+Vea10 = 4
+Vea11 = 4
+Vea12 = 4
+Vea13 = 4
+Vea14 = 5
+Vea15 = 5
+Vea16 = 5
+Vea17 = 5
+Vea18 = 5
+Vea19 = 6
+Vea20 = 6
+Vea21 = 6
+Vea22 = 6
+Vea23 = 7
+Vea24 = 7
+Vea25 = 7
+Vea26 = 7
+Vea27 = 8
+Vea28 = 8
+Vea29 = 8
+Vea30 = 8
+Vea31 = 8
+Vea32 = 9
+Vea33 = 9
+Vea34 = 9
+Vea35 = 9
+Vea36 = 10
+Vea37 = 10
+Vea38 = 10
+Vea39 = 10
+@I [SIM-1] CSim done with 0 errors.

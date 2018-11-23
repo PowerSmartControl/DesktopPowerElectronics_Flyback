@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Jun 12 18:49:41 2017
+# Process ID: 11336
+# Current directory: D:/Projects/flyback_controller_v01
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12528 D:\Projects\flyback_controller_v01\flyback_controller_v01.xpr
+# Log file: D:/Projects/flyback_controller_v01/vivado.log
+# Journal file: D:/Projects/flyback_controller_v01\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project -read_only D:/Projects/flyback_controller_v01/flyback_controller_v01.xpr
+update_compile_order -fileset sources_1
+save_project_as flyback_revA D:/Projects/flyback/vivado/flyback_revA -force
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status

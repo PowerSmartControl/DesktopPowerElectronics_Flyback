@@ -1,0 +1,712 @@
+
+
+================================================================
+== Vivado HLS Report for 'PI_compensator'
+================================================================
+* Date:           Fri Mar 04 11:48:11 2016
+
+* Version:        2015.4 (Build 1412921 on Wed Nov 18 09:58:55 AM 2015)
+* Project:        PI_compensator
+* Solution:       dbg_mode
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.26|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   14|   32|   15|   33|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 33
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / (!or_cond & !or_cond2)
+	33  / (or_cond) | (or_cond2)
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+* FSM state operations: 
+
+ <State 1>: 6.41ns
+ST_1: v_meas_read [1/1] 0.00ns
+:14  %v_meas_read = call i12 @_ssdm_op_Read.ap_auto.i12(i12 %v_meas) nounwind
+
+ST_1: y1 [1/1] 0.00ns
+:26  %y1 = zext i12 %v_meas_read to i32
+
+ST_1: y [6/6] 6.41ns
+:27  %y = sitofp i32 %y1 to float
+
+
+ <State 2>: 6.41ns
+ST_2: y [5/6] 6.41ns
+:27  %y = sitofp i32 %y1 to float
+
+
+ <State 3>: 6.41ns
+ST_3: y [4/6] 6.41ns
+:27  %y = sitofp i32 %y1 to float
+
+
+ <State 4>: 6.41ns
+ST_4: y [3/6] 6.41ns
+:27  %y = sitofp i32 %y1 to float
+
+
+ <State 5>: 6.41ns
+ST_5: y [2/6] 6.41ns
+:27  %y = sitofp i32 %y1 to float
+
+
+ <State 6>: 6.41ns
+ST_6: y [1/6] 6.41ns
+:27  %y = sitofp i32 %y1 to float
+
+
+ <State 7>: 8.26ns
+ST_7: Ki2_read [1/1] 1.00ns
+:11  %Ki2_read = call float @_ssdm_op_Read.s_axilite.float(float %Ki2) nounwind
+
+ST_7: Kp_read [1/1] 1.00ns
+:12  %Kp_read = call float @_ssdm_op_Read.s_axilite.float(float %Kp) nounwind
+
+ST_7: X_MAX_read [1/1] 1.00ns
+:13  %X_MAX_read = call i10 @_ssdm_op_Read.s_axilite.i10(i10 %X_MAX) nounwind
+
+ST_7: v_ref_read [1/1] 1.00ns
+:15  %v_ref_read = call float @_ssdm_op_Read.s_axilite.float(float %v_ref) nounwind
+
+ST_7: e [5/5] 7.26ns
+:28  %e = fsub float %v_ref_read, %y
+
+
+ <State 8>: 7.26ns
+ST_8: e [4/5] 7.26ns
+:28  %e = fsub float %v_ref_read, %y
+
+
+ <State 9>: 7.26ns
+ST_9: e [3/5] 7.26ns
+:28  %e = fsub float %v_ref_read, %y
+
+
+ <State 10>: 7.26ns
+ST_10: e [2/5] 7.26ns
+:28  %e = fsub float %v_ref_read, %y
+
+
+ <State 11>: 7.26ns
+ST_11: e [1/5] 7.26ns
+:28  %e = fsub float %v_ref_read, %y
+
+
+ <State 12>: 6.79ns
+ST_12: tmp_8 [1/1] 6.79ns
+:37  %tmp_8 = fcmp olt float %e, 0.000000e+00
+
+
+ <State 13>: 8.16ns
+ST_13: stg_52 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(float %v_ref) nounwind, !map !7
+
+ST_13: stg_53 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i12 %v_meas) nounwind, !map !13
+
+ST_13: stg_54 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i10 %X_MAX) nounwind, !map !17
+
+ST_13: stg_55 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(float %Kp) nounwind, !map !21
+
+ST_13: stg_56 [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(float %Ki2) nounwind, !map !25
+
+ST_13: stg_57 [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i10* %u) nounwind, !map !29
+
+ST_13: stg_58 [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap(float* %yVmeasDbg) nounwind, !map !33
+
+ST_13: stg_59 [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap(float* %yDbg) nounwind, !map !37
+
+ST_13: stg_60 [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecBitsMap(float* %eDbg) nounwind, !map !41
+
+ST_13: stg_61 [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i10* %uDbg) nounwind, !map !45
+
+ST_13: stg_62 [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecTopModule([15 x i8]* @PI_compensator_str) nounwind
+
+ST_13: tmp [1/1] 0.00ns
+:16  %tmp = zext i10 %X_MAX_read to i32
+
+ST_13: stg_64 [1/1] 0.00ns
+:17  call void (...)* @_ssdm_op_SpecInterface(i10 %X_MAX, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_13: stg_65 [1/1] 0.00ns
+:18  call void (...)* @_ssdm_op_SpecInterface(i10* %uDbg, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_13: stg_66 [1/1] 0.00ns
+:19  call void (...)* @_ssdm_op_SpecInterface(float* %eDbg, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_13: stg_67 [1/1] 0.00ns
+:20  call void (...)* @_ssdm_op_SpecInterface(float* %yDbg, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_13: stg_68 [1/1] 0.00ns
+:21  call void (...)* @_ssdm_op_SpecInterface(float* %yVmeasDbg, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_13: stg_69 [1/1] 0.00ns
+:22  call void (...)* @_ssdm_op_SpecInterface(i10* %u, [8 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_13: stg_70 [1/1] 0.00ns
+:23  call void (...)* @_ssdm_op_SpecInterface(float %Ki2, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_13: stg_71 [1/1] 0.00ns
+:24  call void (...)* @_ssdm_op_SpecInterface(float %Kp, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_13: stg_72 [1/1] 0.00ns
+:25  call void (...)* @_ssdm_op_SpecInterface(float %v_ref, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_13: sat_load [1/1] 0.00ns
+:29  %sat_load = load i2* @sat, align 1
+
+ST_13: tmp_3 [1/1] 0.00ns
+:30  %tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i2.i32(i2 %sat_load, i32 1)
+
+ST_13: e_to_int [1/1] 0.00ns
+:31  %e_to_int = bitcast float %e to i32
+
+ST_13: tmp_1 [1/1] 0.00ns
+:32  %tmp_1 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %e_to_int, i32 23, i32 30)
+
+ST_13: tmp_14 [1/1] 0.00ns
+:33  %tmp_14 = trunc i32 %e_to_int to i23
+
+ST_13: notlhs [1/1] 2.00ns
+:34  %notlhs = icmp ne i8 %tmp_1, -1
+
+ST_13: notrhs [1/1] 2.39ns
+:35  %notrhs = icmp eq i23 %tmp_14, 0
+
+ST_13: tmp_6 [1/1] 1.37ns
+:36  %tmp_6 = or i1 %notrhs, %notlhs
+
+ST_13: tmp_9 [1/1] 1.37ns
+:38  %tmp_9 = and i1 %tmp_6, %tmp_8
+
+ST_13: or_cond [1/1] 1.37ns
+:39  %or_cond = and i1 %tmp_3, %tmp_9
+
+ST_13: stg_83 [1/1] 0.00ns
+:40  br i1 %or_cond, label %._crit_edge, label %1
+
+ST_13: tmp_2 [1/1] 1.36ns
+:0  %tmp_2 = icmp eq i2 %sat_load, 1
+
+ST_13: tmp_s [1/1] 6.79ns
+:1  %tmp_s = fcmp ogt float %e, 0.000000e+00
+
+ST_13: tmp_11 [1/1] 1.37ns
+:2  %tmp_11 = and i1 %tmp_6, %tmp_s
+
+
+ <State 14>: 5.70ns
+ST_14: or_cond2 [1/1] 1.37ns
+:3  %or_cond2 = and i1 %tmp_2, %tmp_11
+
+ST_14: stg_88 [1/1] 0.00ns
+:4  br i1 %or_cond2, label %._crit_edge, label %_ifconv
+
+ST_14: tmp_4 [4/4] 5.70ns
+_ifconv:1  %tmp_4 = fmul float %e, %Ki2_read
+
+ST_14: stg_90 [1/1] 0.00ns
+._crit_edge:0  br label %._crit_edge5_ifconv
+
+
+ <State 15>: 5.70ns
+ST_15: tmp_4 [3/4] 5.70ns
+_ifconv:1  %tmp_4 = fmul float %e, %Ki2_read
+
+
+ <State 16>: 5.70ns
+ST_16: tmp_4 [2/4] 5.70ns
+_ifconv:1  %tmp_4 = fmul float %e, %Ki2_read
+
+
+ <State 17>: 6.41ns
+ST_17: tmp_4 [1/4] 5.70ns
+_ifconv:1  %tmp_4 = fmul float %e, %Ki2_read
+
+ST_17: tmp_7 [6/6] 6.41ns
+_ifconv:11  %tmp_7 = sitofp i32 %tmp to float
+
+
+ <State 18>: 7.26ns
+ST_18: x_integral_load [1/1] 0.00ns
+_ifconv:0  %x_integral_load = load float* @x_integral, align 4
+
+ST_18: tmp_5 [5/5] 7.26ns
+_ifconv:2  %tmp_5 = fadd float %x_integral_load, %tmp_4
+
+ST_18: tmp_7 [5/6] 6.41ns
+_ifconv:11  %tmp_7 = sitofp i32 %tmp to float
+
+
+ <State 19>: 7.26ns
+ST_19: tmp_5 [4/5] 7.26ns
+_ifconv:2  %tmp_5 = fadd float %x_integral_load, %tmp_4
+
+ST_19: tmp_7 [4/6] 6.41ns
+_ifconv:11  %tmp_7 = sitofp i32 %tmp to float
+
+
+ <State 20>: 7.26ns
+ST_20: tmp_5 [3/5] 7.26ns
+_ifconv:2  %tmp_5 = fadd float %x_integral_load, %tmp_4
+
+ST_20: tmp_7 [3/6] 6.41ns
+_ifconv:11  %tmp_7 = sitofp i32 %tmp to float
+
+
+ <State 21>: 7.26ns
+ST_21: tmp_5 [2/5] 7.26ns
+_ifconv:2  %tmp_5 = fadd float %x_integral_load, %tmp_4
+
+ST_21: tmp_7 [2/6] 6.41ns
+_ifconv:11  %tmp_7 = sitofp i32 %tmp to float
+
+ST_21: tmp_10 [4/4] 5.70ns
+_ifconv:28  %tmp_10 = fmul float %e, %Kp_read
+
+
+ <State 22>: 7.26ns
+ST_22: tmp_5 [1/5] 7.26ns
+_ifconv:2  %tmp_5 = fadd float %x_integral_load, %tmp_4
+
+ST_22: tmp_7 [1/6] 6.41ns
+_ifconv:11  %tmp_7 = sitofp i32 %tmp to float
+
+ST_22: tmp_10 [3/4] 5.70ns
+_ifconv:28  %tmp_10 = fmul float %e, %Kp_read
+
+
+ <State 23>: 8.16ns
+ST_23: tmp_5_to_int [1/1] 0.00ns
+_ifconv:3  %tmp_5_to_int = bitcast float %tmp_5 to i32
+
+ST_23: tmp_12 [1/1] 0.00ns
+_ifconv:4  %tmp_12 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %tmp_5_to_int, i32 23, i32 30)
+
+ST_23: tmp_19 [1/1] 0.00ns
+_ifconv:5  %tmp_19 = trunc i32 %tmp_5_to_int to i23
+
+ST_23: notlhs2 [1/1] 2.00ns
+_ifconv:6  %notlhs2 = icmp ne i8 %tmp_12, -1
+
+ST_23: notrhs2 [1/1] 2.39ns
+_ifconv:7  %notrhs2 = icmp eq i23 %tmp_19, 0
+
+ST_23: tmp_13 [1/1] 1.37ns
+_ifconv:8  %tmp_13 = or i1 %notrhs2, %notlhs2
+
+ST_23: tmp_15 [1/1] 6.79ns
+_ifconv:9  %tmp_15 = fcmp olt float %tmp_5, 0.000000e+00
+
+ST_23: tmp_16 [1/1] 1.37ns
+_ifconv:10  %tmp_16 = and i1 %tmp_13, %tmp_15
+
+ST_23: tmp_7_to_int [1/1] 0.00ns
+_ifconv:12  %tmp_7_to_int = bitcast float %tmp_7 to i32
+
+ST_23: tmp_17 [1/1] 0.00ns
+_ifconv:13  %tmp_17 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %tmp_7_to_int, i32 23, i32 30)
+
+ST_23: tmp_25 [1/1] 0.00ns
+_ifconv:14  %tmp_25 = trunc i32 %tmp_7_to_int to i23
+
+ST_23: notlhs4 [1/1] 2.00ns
+_ifconv:15  %notlhs4 = icmp ne i8 %tmp_17, -1
+
+ST_23: notrhs4 [1/1] 2.39ns
+_ifconv:16  %notrhs4 = icmp eq i23 %tmp_25, 0
+
+ST_23: tmp_18 [1/1] 1.37ns
+_ifconv:17  %tmp_18 = or i1 %notrhs4, %notlhs4
+
+ST_23: tmp_20 [1/1] 1.37ns
+_ifconv:18  %tmp_20 = and i1 %tmp_13, %tmp_18
+
+ST_23: tmp_21 [1/1] 6.79ns
+_ifconv:19  %tmp_21 = fcmp ogt float %tmp_5, %tmp_7
+
+ST_23: tmp_22 [1/1] 1.37ns
+_ifconv:20  %tmp_22 = and i1 %tmp_20, %tmp_21
+
+ST_23: tmp_10 [2/4] 5.70ns
+_ifconv:28  %tmp_10 = fmul float %e, %Kp_read
+
+
+ <State 24>: 5.70ns
+ST_24: sel_tmp [1/1] 1.37ns
+_ifconv:21  %sel_tmp = xor i1 %tmp_16, true
+
+ST_24: sel_tmp1 [1/1] 1.37ns
+_ifconv:22  %sel_tmp1 = and i1 %tmp_22, %sel_tmp
+
+ST_24: sel_tmp2 [1/1] 1.37ns
+_ifconv:23  %sel_tmp2 = select i1 %sel_tmp1, float %tmp_7, float %tmp_5
+
+ST_24: x_integral_new [1/1] 1.37ns
+_ifconv:24  %x_integral_new = select i1 %tmp_16, float 0.000000e+00, float %sel_tmp2
+
+ST_24: sel_tmp6_cast [1/1] 0.00ns
+_ifconv:25  %sel_tmp6_cast = zext i1 %sel_tmp1 to i2
+
+ST_24: storemerge1 [1/1] 1.37ns
+_ifconv:26  %storemerge1 = select i1 %tmp_16, i2 -1, i2 %sel_tmp6_cast
+
+ST_24: stg_132 [1/1] 0.00ns
+_ifconv:27  store i2 %storemerge1, i2* @sat, align 1
+
+ST_24: tmp_10 [1/4] 5.70ns
+_ifconv:28  %tmp_10 = fmul float %e, %Kp_read
+
+ST_24: stg_134 [1/1] 0.00ns
+_ifconv:48  store float %x_integral_new, float* @x_integral, align 4
+
+
+ <State 25>: 7.26ns
+ST_25: x [5/5] 7.26ns
+_ifconv:29  %x = fadd float %tmp_10, %x_integral_new
+
+
+ <State 26>: 7.26ns
+ST_26: x [4/5] 7.26ns
+_ifconv:29  %x = fadd float %tmp_10, %x_integral_new
+
+
+ <State 27>: 7.26ns
+ST_27: x [3/5] 7.26ns
+_ifconv:29  %x = fadd float %tmp_10, %x_integral_new
+
+
+ <State 28>: 7.26ns
+ST_28: x [2/5] 7.26ns
+_ifconv:29  %x = fadd float %tmp_10, %x_integral_new
+
+
+ <State 29>: 7.26ns
+ST_29: x [1/5] 7.26ns
+_ifconv:29  %x = fadd float %tmp_10, %x_integral_new
+
+
+ <State 30>: 8.16ns
+ST_30: x_to_int [1/1] 0.00ns
+_ifconv:30  %x_to_int = bitcast float %x to i32
+
+ST_30: tmp_23 [1/1] 0.00ns
+_ifconv:31  %tmp_23 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %x_to_int, i32 23, i32 30)
+
+ST_30: tmp_30 [1/1] 0.00ns
+_ifconv:32  %tmp_30 = trunc i32 %x_to_int to i23
+
+ST_30: notlhs5 [1/1] 2.00ns
+_ifconv:33  %notlhs5 = icmp ne i8 %tmp_23, -1
+
+ST_30: notrhs5 [1/1] 2.39ns
+_ifconv:34  %notrhs5 = icmp eq i23 %tmp_30, 0
+
+ST_30: tmp_24 [1/1] 1.37ns
+_ifconv:35  %tmp_24 = or i1 %notrhs5, %notlhs5
+
+ST_30: tmp_26 [1/1] 6.79ns
+_ifconv:36  %tmp_26 = fcmp ogt float %x, 0.000000e+00
+
+ST_30: tmp_27 [1/1] 1.37ns
+_ifconv:37  %tmp_27 = and i1 %tmp_24, %tmp_26
+
+
+ <State 31>: 8.16ns
+ST_31: x_1 [1/1] 1.37ns
+_ifconv:38  %x_1 = select i1 %tmp_27, float %x, float 0.000000e+00
+
+ST_31: tmp_32 [1/1] 6.79ns
+_ifconv:46  %tmp_32 = fcmp olt float %x_1, %tmp_7
+
+
+ <State 32>: 7.87ns
+ST_32: x_1_to_int [1/1] 0.00ns
+_ifconv:39  %x_1_to_int = bitcast float %x_1 to i32
+
+ST_32: tmp_28 [1/1] 0.00ns
+_ifconv:40  %tmp_28 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %x_1_to_int, i32 23, i32 30)
+
+ST_32: tmp_35 [1/1] 0.00ns
+_ifconv:41  %tmp_35 = trunc i32 %x_1_to_int to i23
+
+ST_32: notlhs6 [1/1] 2.00ns
+_ifconv:42  %notlhs6 = icmp ne i8 %tmp_28, -1
+
+ST_32: notrhs6 [1/1] 2.39ns
+_ifconv:43  %notrhs6 = icmp eq i23 %tmp_35, 0
+
+ST_32: tmp_29 [1/1] 1.37ns
+_ifconv:44  %tmp_29 = or i1 %notrhs6, %notlhs6
+
+ST_32: tmp_31 [1/1] 1.37ns
+_ifconv:45  %tmp_31 = and i1 %tmp_29, %tmp_18
+
+ST_32: tmp_33 [1/1] 1.37ns
+_ifconv:47  %tmp_33 = and i1 %tmp_31, %tmp_32
+
+ST_32: x_1_tmp_7 [1/1] 1.37ns
+_ifconv:49  %x_1_tmp_7 = select i1 %tmp_33, float %x_1, float %tmp_7
+
+ST_32: stg_159 [1/1] 0.00ns
+_ifconv:50  br label %._crit_edge5_ifconv
+
+
+ <State 33>: 8.24ns
+ST_33: x_assign [1/1] 0.00ns
+._crit_edge5_ifconv:0  %x_assign = phi float [ undef, %._crit_edge ], [ %x_1_tmp_7, %_ifconv ]
+
+ST_33: p_Val2_s [1/1] 0.00ns
+._crit_edge5_ifconv:1  %p_Val2_s = bitcast float %x_assign to i32
+
+ST_33: loc_V [1/1] 0.00ns
+._crit_edge5_ifconv:2  %loc_V = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %p_Val2_s, i32 23, i32 30) nounwind
+
+ST_33: loc_V_1 [1/1] 0.00ns
+._crit_edge5_ifconv:3  %loc_V_1 = trunc i32 %p_Val2_s to i23
+
+ST_33: p_Result_s [1/1] 0.00ns
+._crit_edge5_ifconv:4  %p_Result_s = call i24 @_ssdm_op_BitConcatenate.i24.i1.i23(i1 true, i23 %loc_V_1) nounwind
+
+ST_33: tmp_2_i_i [1/1] 0.00ns
+._crit_edge5_ifconv:5  %tmp_2_i_i = zext i24 %p_Result_s to i62
+
+ST_33: tmp_i_i_i_cast8 [1/1] 0.00ns
+._crit_edge5_ifconv:6  %tmp_i_i_i_cast8 = zext i8 %loc_V to i9
+
+ST_33: sh_assign [1/1] 1.72ns
+._crit_edge5_ifconv:7  %sh_assign = add i9 -127, %tmp_i_i_i_cast8
+
+ST_33: isNeg [1/1] 0.00ns
+._crit_edge5_ifconv:8  %isNeg = call i1 @_ssdm_op_BitSelect.i1.i9.i32(i9 %sh_assign, i32 8)
+
+ST_33: tmp_4_i_i [1/1] 1.72ns
+._crit_edge5_ifconv:9  %tmp_4_i_i = sub i8 127, %loc_V
+
+ST_33: tmp_4_i_i_cast [1/1] 0.00ns
+._crit_edge5_ifconv:10  %tmp_4_i_i_cast = sext i8 %tmp_4_i_i to i9
+
+ST_33: sh_assign_1 [1/1] 1.37ns
+._crit_edge5_ifconv:11  %sh_assign_1 = select i1 %isNeg, i9 %tmp_4_i_i_cast, i9 %sh_assign
+
+ST_33: sh_assign_1_cast [1/1] 0.00ns
+._crit_edge5_ifconv:12  %sh_assign_1_cast = sext i9 %sh_assign_1 to i32
+
+ST_33: sh_assign_1_cast_cast [1/1] 0.00ns
+._crit_edge5_ifconv:13  %sh_assign_1_cast_cast = sext i9 %sh_assign_1 to i24
+
+ST_33: tmp_6_i_i [1/1] 0.00ns
+._crit_edge5_ifconv:14  %tmp_6_i_i = zext i32 %sh_assign_1_cast to i62
+
+ST_33: tmp_7_i_i [1/1] 2.78ns
+._crit_edge5_ifconv:15  %tmp_7_i_i = lshr i24 %p_Result_s, %sh_assign_1_cast_cast
+
+ST_33: tmp_9_i_i [1/1] 2.78ns
+._crit_edge5_ifconv:16  %tmp_9_i_i = shl i62 %tmp_2_i_i, %tmp_6_i_i
+
+ST_33: tmp_41 [1/1] 0.00ns
+._crit_edge5_ifconv:17  %tmp_41 = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %tmp_7_i_i, i32 23)
+
+ST_33: tmp_34 [1/1] 0.00ns
+._crit_edge5_ifconv:18  %tmp_34 = zext i1 %tmp_41 to i10
+
+ST_33: tmp_36 [1/1] 0.00ns
+._crit_edge5_ifconv:19  %tmp_36 = call i10 @_ssdm_op_PartSelect.i10.i62.i32.i32(i62 %tmp_9_i_i, i32 23, i32 32)
+
+ST_33: tmp_37 [1/1] 1.37ns
+._crit_edge5_ifconv:20  %tmp_37 = select i1 %isNeg, i10 %tmp_34, i10 %tmp_36
+
+ST_33: stg_181 [1/1] 0.00ns
+._crit_edge5_ifconv:21  call void @_ssdm_op_Write.ap_none.i10P(i10* %u, i10 %tmp_37) nounwind
+
+ST_33: stg_182 [1/1] 1.00ns
+._crit_edge5_ifconv:22  call void @_ssdm_op_Write.s_axilite.floatP(float* %yVmeasDbg, float %y) nounwind
+
+ST_33: stg_183 [1/1] 1.00ns
+._crit_edge5_ifconv:23  call void @_ssdm_op_Write.s_axilite.floatP(float* %yDbg, float %y) nounwind
+
+ST_33: stg_184 [1/1] 1.00ns
+._crit_edge5_ifconv:24  call void @_ssdm_op_Write.s_axilite.floatP(float* %eDbg, float %e) nounwind
+
+ST_33: stg_185 [1/1] 1.00ns
+._crit_edge5_ifconv:25  call void @_ssdm_op_Write.s_axilite.i10P(i10* %uDbg, i10 %tmp_37) nounwind
+
+ST_33: stg_186 [1/1] 0.00ns
+._crit_edge5_ifconv:26  ret void
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

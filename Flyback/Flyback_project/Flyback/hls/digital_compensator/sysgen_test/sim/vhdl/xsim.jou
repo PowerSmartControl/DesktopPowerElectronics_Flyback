@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2015.4.1 (64-bit)
+# SW Build 1431336 on Fri Dec 11 14:52:45 MST 2015
+# IP Build 1427053 on Mon Dec  7 12:56:29 MST 2015
+# Start of session at: Mon Feb 08 20:57:03 2016
+# Process ID: 7500
+# Current directory: D:/flyback_controller/hls/digital_compensator/sysgen_test/sim/vhdl
+# Command line: xsim.exe -mode tcl -source {xsim.dir/digital_compensator/xsim_script.tcl}
+# Log file: D:/flyback_controller/hls/digital_compensator/sysgen_test/sim/vhdl/xsim.log
+# Journal file: D:/flyback_controller/hls/digital_compensator/sysgen_test/sim/vhdl\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/digital_compensator/xsim_script.tcl
+source digital_compensator.tcl

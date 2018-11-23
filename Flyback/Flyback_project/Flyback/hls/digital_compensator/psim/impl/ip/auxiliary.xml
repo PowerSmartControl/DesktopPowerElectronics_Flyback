@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="Dig_compensator" xd:componentRef="Dig_compensator" xd:initiationInterval="104" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="params.vRef" xd:originalName="params" xd:direction="in" xd:interfaceRef="params_vRef" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="params.a[0]" xd:originalName="params" xd:direction="in" xd:interfaceRef="params_a_0" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="params.a[1]" xd:originalName="params" xd:direction="in" xd:interfaceRef="params_a_1" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="params.a[2]" xd:originalName="params" xd:direction="in" xd:interfaceRef="params_a_2" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="params.a[3]" xd:originalName="params" xd:direction="in" xd:interfaceRef="params_a_3" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="params.b[0]" xd:originalName="params" xd:direction="in" xd:interfaceRef="params_b_0" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="params.b[1]" xd:originalName="params" xd:direction="in" xd:interfaceRef="params_b_1" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="params.b[2]" xd:originalName="params" xd:direction="in" xd:interfaceRef="params_b_2" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="params.b[3]" xd:originalName="params" xd:direction="in" xd:interfaceRef="params_b_3" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="v_meas" xd:originalName="v_meas" xd:direction="in" xd:interfaceRef="v_meas" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="12"/>
+  <xd:arg xd:name="*(u)" xd:originalName="u" xd:direction="out" xd:interfaceRef="u" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="10"/>
+  <xd:latencyEstimates xd:best-case="103" xd:worst-case="103" xd:average-case="103"/>
+  <xd:resourceEstimates xd:LUT="3732" xd:FF="2149" xd:BRAM="0" xd:DSP="16"/>
+</xd:acceleratorMap>

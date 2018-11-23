@@ -1,0 +1,196 @@
+
+
+================================================================
+== Vivado HLS Report for 'PI_compensator_DiffEq'
+================================================================
+* Date:           Tue Mar 15 08:08:43 2016
+
+* Version:        2015.4 (Build 1412921 on Wed Nov 18 09:58:55 AM 2015)
+* Project:        PI_compensator_diff
+* Solution:       dbg_mode
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.61|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   28|   28|   29|   29|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      -|      -|      -|
+|Expression       |        -|      -|      0|    388|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        0|      8|   1187|   2289|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|    191|
+|Register         |        -|      -|    406|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|      8|   1593|   2868|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|     10|      4|     16|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------------------+--------------------------------------------------------+---------+-------+-----+-----+
+    |                          Instance                         |                         Module                         | BRAM_18K| DSP48E|  FF | LUT |
+    +-----------------------------------------------------------+--------------------------------------------------------+---------+-------+-----+-----+
+    |PI_compensator_DiffEq_AXILiteS_s_axi_U                     |PI_compensator_DiffEq_AXILiteS_s_axi                    |        0|      0|  290|  464|
+    |PI_compensator_DiffEq_faddfsub_32ns_32ns_32_5_full_dsp_U0  |PI_compensator_DiffEq_faddfsub_32ns_32ns_32_5_full_dsp  |        0|      2|  205|  390|
+    |PI_compensator_DiffEq_fcmp_32ns_32ns_1_1_U4                |PI_compensator_DiffEq_fcmp_32ns_32ns_1_1                |        0|      0|   66|  239|
+    |PI_compensator_DiffEq_fmul_32ns_32ns_32_4_max_dsp_U1       |PI_compensator_DiffEq_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
+    |PI_compensator_DiffEq_fmul_32ns_32ns_32_4_max_dsp_U2       |PI_compensator_DiffEq_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
+    |PI_compensator_DiffEq_sitofp_32ns_32_6_U3                  |PI_compensator_DiffEq_sitofp_32ns_32_6                  |        0|      0|  340|  554|
+    +-----------------------------------------------------------+--------------------------------------------------------+---------+-------+-----+-----+
+    |Total                                                      |                                                        |        0|      8| 1187| 2289|
+    +-----------------------------------------------------------+--------------------------------------------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+-------+---+-----+------------+------------+
+    |     Variable Name     | Operation| DSP48E| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+-------+---+-----+------------+------------+
+    |sh_assign_fu_375_p2    |     +    |      0|  0|    9|           8|           9|
+    |tmp_4_i_i_fu_389_p2    |     -    |      0|  0|    8|           7|           8|
+    |sh_assign_1_fu_399_p3  |  Select  |      0|  0|    9|           1|           9|
+    |tmp_22_fu_452_p3       |  Select  |      0|  0|   10|           1|          10|
+    |tmp_5_fu_240_p3        |  Select  |      0|  0|   32|           1|          32|
+    |x_assign_fu_329_p3     |  Select  |      0|  0|   32|           1|          32|
+    |tmp_10_fu_234_p2       |    and   |      0|  0|    1|           1|           1|
+    |tmp_17_fu_319_p2       |    and   |      0|  0|    1|           1|           1|
+    |tmp_19_fu_325_p2       |    and   |      0|  0|    1|           1|           1|
+    |notlhs3_fu_283_p2      |   icmp   |      0|  0|    3|           8|           2|
+    |notlhs5_fu_301_p2      |   icmp   |      0|  0|    3|           8|           2|
+    |notlhs_fu_216_p2       |   icmp   |      0|  0|    3|           8|           2|
+    |notrhs4_fu_289_p2      |   icmp   |      0|  0|    8|          23|           1|
+    |notrhs6_fu_307_p2      |   icmp   |      0|  0|    8|          23|           1|
+    |notrhs_fu_222_p2       |   icmp   |      0|  0|    8|          23|           1|
+    |tmp_7_i_i_fu_419_p2    |   lshr   |      0|  0|   63|          24|          24|
+    |tmp_15_fu_295_p2       |    or    |      0|  0|    1|           1|           1|
+    |tmp_16_fu_313_p2       |    or    |      0|  0|    1|           1|           1|
+    |tmp_8_fu_228_p2        |    or    |      0|  0|    1|           1|           1|
+    |tmp_9_i_i_fu_425_p2    |    shl   |      0|  0|  186|          62|          62|
+    +-----------------------+----------+-------+---+-----+------------+------------+
+    |Total                  |          |      0|  0|  388|         204|         201|
+    +-----------------------+----------+-------+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+----+-----------+-----+-----------+
+    |        Name       | LUT| Input Size| Bits| Total Bits|
+    +-------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm          |  24|         30|    1|         30|
+    |grp_fu_147_opcode  |   2|          3|    2|          6|
+    |grp_fu_147_p0      |  32|          4|   32|        128|
+    |grp_fu_147_p1      |  32|          4|   32|        128|
+    |grp_fu_160_p0      |  32|          3|   32|         96|
+    |grp_fu_163_opcode  |   5|          3|    5|         15|
+    |grp_fu_163_p0      |  32|          3|   32|         96|
+    |grp_fu_163_p1      |  32|          3|   32|         96|
+    +-------------------+----+-----------+-----+-----------+
+    |Total              | 191|         53|  168|        595|
+    +-------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------+----+----+-----+-----------+
+    |        Name        | FF | LUT| Bits| Const Bits|
+    +--------------------+----+----+-----+-----------+
+    |X_MAX_read_reg_482  |  10|   0|   10|          0|
+    |ap_CS_fsm           |  29|   0|   29|          0|
+    |b0_read_reg_477     |  32|   0|   32|          0|
+    |b1_read_reg_472     |  32|   0|   32|          0|
+    |e0                  |  32|   0|   32|          0|
+    |e0_loc_reg_492      |  32|   0|   32|          0|
+    |isNeg_reg_551       |   1|   0|    1|          0|
+    |reg_168             |  32|   0|   32|          0|
+    |tmp_10_reg_524      |   1|   0|    1|          0|
+    |tmp_17_reg_541      |   1|   0|    1|          0|
+    |tmp_18_reg_546      |   1|   0|    1|          0|
+    |tmp_1_reg_509       |  32|   0|   32|          0|
+    |tmp_21_reg_561      |  10|   0|   10|          0|
+    |tmp_25_reg_556      |   1|   0|    1|          0|
+    |tmp_5_reg_536       |  32|   0|   32|          0|
+    |tmp_6_reg_529       |  32|   0|   32|          0|
+    |tmp_s_reg_504       |  32|   0|   32|          0|
+    |x0                  |  32|   0|   32|          0|
+    |y_reg_465           |  32|   0|   32|          0|
+    +--------------------+----+----+-----+-----------+
+    |Total               | 406|   0|  406|          0|
+    +--------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-----------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++------------------------+-----+-----+------------+-----------------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_AWREADY  | out |    1|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_AWADDR   |  in |    7|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_WVALID   |  in |    1|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_WREADY   | out |    1|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_WDATA    |  in |   32|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_WSTRB    |  in |    4|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_ARVALID  |  in |    1|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_ARREADY  | out |    1|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_ARADDR   |  in |    7|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_RVALID   | out |    1|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_RREADY   |  in |    1|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_RDATA    | out |   32|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_RRESP    | out |    2|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_BVALID   | out |    1|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_BREADY   |  in |    1|    s_axi   |        AXILiteS       |    pointer   |
+|s_axi_AXILiteS_BRESP    | out |    2|    s_axi   |        AXILiteS       |    pointer   |
+|ap_clk                  |  in |    1| ap_ctrl_hs | PI_compensator_DiffEq | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_hs | PI_compensator_DiffEq | return value |
+|ap_start                |  in |    1| ap_ctrl_hs | PI_compensator_DiffEq | return value |
+|ap_done                 | out |    1| ap_ctrl_hs | PI_compensator_DiffEq | return value |
+|ap_idle                 | out |    1| ap_ctrl_hs | PI_compensator_DiffEq | return value |
+|ap_ready                | out |    1| ap_ctrl_hs | PI_compensator_DiffEq | return value |
+|v_meas                  |  in |   12|   ap_none  |         v_meas        |    scalar    |
+|u                       | out |   10|   ap_none  |           u           |    pointer   |
++------------------------+-----+-----+------------+-----------------------+--------------+
+

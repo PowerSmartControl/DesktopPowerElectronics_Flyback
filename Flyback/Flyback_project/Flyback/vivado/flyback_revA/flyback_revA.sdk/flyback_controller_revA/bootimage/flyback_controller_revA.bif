@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\Zynq_FSBL\Debug\Zynq_FSBL.elf
+	D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\top_design_wrapper_hw_platform_0\top_design_wrapper.bit
+	D:\flyback_controller\flyback_controller_v01\flyback_controller_v01.sdk\flyback_controller_revA\Debug\flyback_controller_revA.elf
+}

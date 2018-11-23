@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="PI_compensator.c" path="D:\flyback_controller\hls\PI_compensator\PI_compensator.c"/>
+  </source>
+  <testbench>
+    <originFiles name="PI_compensator_tb.c" path="D:\flyback_controller\hls\PI_compensator\PI_compensator_tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
