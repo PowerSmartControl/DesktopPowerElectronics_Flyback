@@ -1,0 +1,133 @@
+(ExpressProject "Convertidor AC-DC"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "C:\Program Files\OrCAD\CAPTURE\LIBRARY\PSPICE\analog.olb"
+        (Type "Schematic Library"))
+      (File "C:\Program Files\OrCAD\CAPTURE\LIBRARY\PSPICE\source.olb"
+        (Type "Schematic Library"))
+      (File "C:\Program Files\OrCAD\CAPTURE\LIBRARY\PSPICE\sourcstm.olb"
+        (Type "Schematic Library"))
+      (File "C:\Program Files\OrCAD\CAPTURE\LIBRARY\PSPICE\special.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\convertidor ac-dc.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (RootChangedForceReNetlist "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\convertidor ac-dc-medidas ac.net"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-medidas ac.drc"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-ac-dc.net"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-ac-dc.drc"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-sensores y control.drc"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-sensado y trf. clarke.drc"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-sensado y trf clarke.net"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-sensado y trf clarke.drc"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-control.drc"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-pwm trifásico.drc"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-pwm trifasico.net"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-pwm trifasico.drc"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-control 2.drc"
+      (Type "Report"))
+    (File
+       ".\convertidor ac-dc-pspicefiles\sensado y trf clarke\sensado y trf clarke.net"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-pspicefiles\control\control.net"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-pspicefiles\control 2\control 2.net"
+      (Type "Report"))
+    (File ".\convertidor ac-dc-pspicefiles\flyback\flyback.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\convertidor ac-dc-pspicefiles\sensado y trf clarke\temp..sim"
+        (DisplayName "Sensado y Trf Clarke-Temp.")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\convertidor ac-dc-pspicefiles\control\temp.sim"
+        (DisplayName "Control-Temp")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\convertidor ac-dc-pspicefiles\control 2\temp.sim"
+        (DisplayName "Control 2-Temp")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\convertidor ac-dc-pspicefiles\flyback\simulacion1.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\convertidor ac-dc-pspicefiles\flyback\simulacion1.sim"
+        (DisplayName "Flyback-Simulacion1")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File "E:\Hardware\OrCAD\Capture\PSpice\burr_brn.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName "E:\Hardware\OrCAD\Capture\PSpice\burr_brn.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\PowerSmartControl\Flyback\Tarjeta_flyback\Simulación\convertidor ac-dc.dsn")
+      (Path "Design Resources"
+         "D:\PowerSmartControl\Flyback\Tarjeta_flyback\Simulación\convertidor ac-dc.dsn"
+         "Flyback")
+      (Path "Design Resources"
+         "D:\PowerSmartControl\Flyback\Tarjeta_flyback\Simulación\convertidor ac-dc.dsn"
+         "Sensado y Trf Clarke")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 0 624 -8 -31 -1 438 0 655"))
+      (Tab 0)))
+  (LastUsedLibraryBrowseDirectory
+     "E:\Electronica\Hardware\OrCAD\Capture\PSpice")
+  (MPSSessionName "jNPbL")
+  (PartMRUSelector
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (mmsz5231bt1
+      (FullPartName "mmsz5231bt1.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\PSPICE\ON_ZENER.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (ISPCBBASICLICENSE "false"))

@@ -1,0 +1,20 @@
+** Profile: "Flyback-Simulacion1"  [ D:\PowerSmartControl\Flyback\Tarjeta_flyback\Simulación\Convertidor AC-DC-PSpiceFiles\Flyback\Simulacion1.sim ] 
+
+** Creating circuit file "Simulacion1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "E:/Hardware/OrCAD/Capture/PSpice/burr_brn.lib" 
+* From [PSPICE NETLIST] section of C:\Users\jNPbL\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 15ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Flyback.net" 
+
+
+.END

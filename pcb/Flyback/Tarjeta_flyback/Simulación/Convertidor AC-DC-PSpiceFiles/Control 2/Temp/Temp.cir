@@ -1,0 +1,20 @@
+** Profile: "Control 2-Temp"  [ C:\Documents and Settings\EGA\Escritorio\Convertidor AC-DC-PSpiceFiles\Control 2\Temp.sim ] 
+
+** Creating circuit file "Temp.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "E:/Hardware/OrCAD/Capture/PSpice/burr_brn.lib" 
+* From [PSPICE NETLIST] section of E:\zOrCAD\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 50ms 0 .02ms 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Control 2.net" 
+
+
+.END

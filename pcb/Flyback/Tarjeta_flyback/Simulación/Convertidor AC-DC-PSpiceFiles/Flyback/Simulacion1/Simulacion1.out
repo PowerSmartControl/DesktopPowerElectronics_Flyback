@@ -1,0 +1,69 @@
+
+**** 11/17/15 14:30:42 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Flyback-Simulacion1"  [ D:\PowerSmartControl\Flyback\Tarjeta_flyback\Simulación\Convertidor AC-DC-PSpiceFiles\Flyback\S
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Simulacion1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "E:/Hardware/OrCAD/Capture/PSpice/burr_brn.lib" 
+* From [PSPICE NETLIST] section of C:\Users\jNPbL\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+-----------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 15ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Flyback.net" 
+
+
+
+**** INCLUDING Flyback.net ****
+* source CONVERTIDOR AC-DC
+C_C47         N09120 N09220  3.9nF  
+R_RpIa         N08902 N08852  1k  
+E_E2Ia         N08998 N08974 N08852 0 1
+R_R57         N09230 N09206  80k  
+C_CpIa         0 N08852  530pF  
+X_H1Ia    0 N09282 N08902 0 Flyback_H1Ia 
+V_VDCIa         N08974 0 2.5V
+V_V4         +15V 0 15
+V_V2         +5V1 0 5
+V_V3         +5V2 0 5
+V_V10         N09282 0  
++PULSE 0.02 0.08 0.0001 5u 50u 10u 150u
+V_V5         0 -15V 15
+R_R9         N09947 N09891  100 TC=0,0 
+R_R10         0 N09891  1meg TC=0,0 
+C_C2         0 N09955  100n  TC=0,0 
+C_C1         N09973 N09891  100n  TC=0,0 
+R_R8         N09955 N09973  33k TC=0,0 
+R_R5         VOUT N09955  33k TC=0,0 
+X_U2         N09973 N09947 +5V 0 N09891 OPA237/BB
+R_R60         N09282 0  1  
+X_U1         N09206 N09220 N09120 +15V 0 VOUT -15V N09230 INA126P/BB
+R_R61         N08998 N09120  680 TC=0,0 
+R_R62         N08974 N09220  680 TC=0,0 
+
+.subckt Flyback_H1Ia 1 2 3 4  
+H_H1Ia         3 4 VH_H1Ia 0.1042
+VH_H1Ia         1 2 0V
+.ends Flyback_H1Ia
+
+**** RESUMING Simulacion1.cir ****
+.END
+

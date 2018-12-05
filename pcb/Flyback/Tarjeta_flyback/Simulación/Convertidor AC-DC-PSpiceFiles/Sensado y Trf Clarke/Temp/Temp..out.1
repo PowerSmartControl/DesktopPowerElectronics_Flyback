@@ -1,0 +1,226 @@
+
+**** 09/14/15 15:47:17 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "Sensado y Trf Clarke-Temp."  [ C:\Documents and Settings\EGA\Escritorio\Convertidor AC-DC-PSpiceFiles\Sensado y Trf Cla
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Temp..cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of E:\zOrCAD\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 50ms 0 .02ms 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Sensado y Trf Clarke.net" 
+
+
+
+**** INCLUDING "Sensado y Trf Clarke.net" ****
+* source CONVERTIDOR AC-DC
+V_V1         VLA 0  AC 14
++SIN 0 14 50 0 0 0
+V_V2         VLB 0  AC 14
++SIN 0 14 50 0 0 120
+V_V3         VLC 0  AC 14
++SIN 0 14 50 0 0 240
+R_Raislam_Raislam_         0 GND_SIGNAL  1e-9  
+V_V4         +VCC_CON GND_SIGNAL 15V
+V_V5         GND_SIGNAL -VCC_CON 15V
+R_R41         VA- N01693  820R  
+X_U6         N01653 N01683 N01693 -VCC_CON GND_SIGNAL /VA +VCC_CON N01660
++  INA126
+R_R39         N01660 N01653  1e9  
+R_R38         VA+ N01683  820R  
+R_RLa         0 VIA  200R  
+R_RHa         VLA VIA  25.15k  
+C_C34         N01693 N01683  10nF  
+R_RIa         0 VIA  22k  
+E_E1a         N00200 GND_SIGNAL VIA 0 4.1
+X_U7         N01843 N01867 N01871 -VCC_CON GND_SIGNAL VB +VCC_CON N01851 INA126
+C_Cpa         GND_SIGNAL N00203  800p  
+R_Rpa         N00200 N00203  1k  
+R_R46         N01851 N01843  1e9  
+R_R47         VB+ N01871  820R  
+R_R45         VB- N01867  820R  
+C_C39         N01871 N01867  10nF  
+C_CIa         0 VIA  10n  
+R_R52         N02066 N02070  1e9  
+X_U8         N02070 N02078 N02062 -VCC_CON GND_SIGNAL VC +VCC_CON N02066 INA126
+R_R55         VC+ N02062  820R  
+E_E2a         N00597 N00550 N00203 GND_SIGNAL 1
+R_R48         VC- N02078  820R  
+C_C44         N02062 N02078  10nF  
+E_E3a         N00600 N00550 GND_SIGNAL N00203 1
+V_VDCa         N00550 GND_SIGNAL 1.23V
+R_Roa+         N00597 VA+  22R  
+R_R0a-         N00600 VA-  22R  
+R_RHb         VLB VIB  25.15  
+R_Rpb         N00965 N00969  1k  
+E_E1b         N00965 GND_SIGNAL VIB 0 4.1
+R_RIb         0 VIB  22k  
+R_RLb         0 VIB  200R  
+C_Cpb         GND_SIGNAL N00969  800p  
+E_E3b         N01061 N01029 GND_SIGNAL N00969 1
+C_CIb         0 VIB  10n  
+E_E2b         N01057 N01029 N00969 GND_SIGNAL 1
+V_VDCb         N01029 GND_SIGNAL 1.23V
+R_R0b-         N01061 VB-  22R  
+R_Rob+         N01057 VB+  22R  
+R_RHc         VLC VIC  25.15  
+R_Rpc         N01271 N01275  1k  
+E_E1c         N01271 GND_SIGNAL VIC 0 4.1
+R_RIc         0 VIC  22k  
+R_RLc         0 VIC  200R  
+E_E3c         N01367 N01335 GND_SIGNAL N01275 1
+E_E2c         N01363 N01335 N01275 GND_SIGNAL 1
+C_CIc         0 VIC  10n  
+C_Cpc         GND_SIGNAL N01275  800p  
+R_Roc+         N01363 VC+  22R  
+R_R0c-         N01367 VC-  22R  
+V_VDCc         N01335 GND_SIGNAL 1.23V
+X_H1Ia    VLA N05626 N04743 GND_SIGNAL Sensado_y_Trf_Clarke_H1Ia 
+C_CpIa         GND_SIGNAL N04698  530pF  
+R_RpIa         N04743 N04698  1k  
+V_VDCIa         N05127 GND_SIGNAL 2.5V
+E_E2Ia         N05195 N05127 N04698 GND_SIGNAL 1
+R_RoIa+         N05195 IA+  2R  
+R_RoIa-         N05127 IA-  680R  
+R_R56         IA+ N05266  680R  
+R_R59         IA- N05262  2R  
+C_C47         N05262 N05266  3.9nF  
+R_R57         N05294 N05270  2.4k  
+X_U1         N05270 N05266 N05262 -VCC_CON GND_SIGNAL /IA +VCC_CON N05294
++  INA126
+V_VDCIb         N06003 GND_SIGNAL 2.5V
+E_E2Ib         N06015 N06003 N05975 GND_SIGNAL 1
+R_RoIb-         N06003 IB-  680R  
+R_RoIb+         N06015 IB+  2R  
+R_R63         IB- N06099  2R  
+R_R65         IB+ N06035  680R  
+X_U2         N06039 N06099 N06035 -VCC_CON GND_SIGNAL IB +VCC_CON N06055 INA126
+R_R64         N06055 N06039  2.4k  
+C_C52         N06035 N06099  3.9nF  
+X_H1Ib    VLB N06332 N05967 GND_SIGNAL Sensado_y_Trf_Clarke_H1Ib 
+C_CpIb         GND_SIGNAL N05975  530pF  
+R_RpIb         N05967 N05975  1k  
+R_RoIc+         N07022 IC+  2R  
+X_U3         N07046 N07014 N07098 -VCC_CON GND_SIGNAL IC +VCC_CON N07054 INA126
+C_C57         N07098 N07014  3.9nF  
+R_RoIc-         N07018 IC-  680R  
+R_R70         N07054 N07046  2.4k  
+E_E2Ic         N07022 N07018 N07042 GND_SIGNAL 1
+R_R73         IC+ N07098  680R  
+V_VDCIc         N07018 GND_SIGNAL 2.5V
+R_RpIc         N07078 N07042  1k  
+C_CpIc         GND_SIGNAL N07042  530pF  
+R_R66         IC- N07014  2R  
+X_H1Ic    VLC N07785 N07078 GND_SIGNAL Sensado_y_Trf_Clarke_H1Ic 
+R_RLOADc         N07785 N05626  22R  
+X_U4         GND_SIGNAL N08941 +VCC_CON -VCC_CON IALFA OPA350
+R_R62         N08941 IALFA  12k  
+R_R61         IC N08941  29.4k  
+R_R58         /IA N08941  14.7k  
+R_R60         IB N08941  29.4k  
+R_R2         GND_SIGNAL IALFA  1000k  
+R_R72         N09497 IBETA  11.5k  
+X_U5-A         GND_SIGNAL N09699 +VCC_CON -VCC_CON N09675 OPA350
+R_R67         IB N09699  12k  
+R_R71         IC N09497  16.2k  
+X_U5-B         GND_SIGNAL N09497 +VCC_CON -VCC_CON IBETA OPA350
+R_R69         N09675 N09497  16.2k  
+R_R3         GND_SIGNAL IBETA  1000k  
+R_R68         N09699 N09675  12k  
+R_R49         VB N13256  12k  
+X_U9         GND_SIGNAL N13116 +VCC_CON -VCC_CON VALFA OPA350
+R_R44         N13116 VALFA  12k  
+R_R43         VC N13116  29.4k  
+R_R40         /VA N13116  14.7k  
+R_R42         VB N13116  29.4k  
+R_R53         VC N13184  16.2k  
+R_R54         N13184 VBETA  11.5k  
+R_R51         N13192 N13184  16.2k  
+X_U10-B         GND_SIGNAL N13184 +VCC_CON -VCC_CON VBETA OPA350
+X_U10-A         GND_SIGNAL N13256 +VCC_CON -VCC_CON N13192 OPA350
+R_R50         N13256 N13192  12k  
+R_R20         N19019 N19007  1e9  
+X_U11         N19007 N19027 N18999 -VCC_CON GND_SIGNAL VDC +VCC_CON N19019
++  INA126
+R_R23         VDC+ N18999  820R  
+R_R19         VDC- N19027  820R  
+C_C13         N18999 N19027  10nF  
+R_RHL         VL VIL  974k  
+R_RpL         N18895 N18899  2k  
+E_E1L         N18895 GND_SIGNAL VIL 0 0.5
+R_RIL         0 VIL  1e9  
+R_RLL         0 VIL  3.01k  
+E_E3L         N18971 N18947 GND_SIGNAL N18899 1
+E_E2L         N18967 N18947 N18899 GND_SIGNAL 1
+C_CIL         0 VIL  470pF  
+C_CpL         GND_SIGNAL N18899  800p  
+R_RoL+         N18967 VDC+  36R  
+R_RoL-         N18971 VDC-  36R  
+V_VDCL         N18947 GND_SIGNAL 1.23V
+R_RdcL         GND_SIGNAL VDC  1e6  
+V_VLoad         VL 0  
++PULSE 400V 500V 10ms 10ms 10ms 10ms 40ms
+R_RLOADa         N05626 N06332  22R  
+R_RLOADb         N06332 N07785  22R  
+
+.subckt Sensado_y_Trf_Clarke_H1Ia 1 2 3 4  
+H_H1Ia         3 4 VH_H1Ia 0.1042
+VH_H1Ia         1 2 0V
+.ends Sensado_y_Trf_Clarke_H1Ia
+
+.subckt Sensado_y_Trf_Clarke_H1Ib 1 2 3 4  
+H_H1Ib         3 4 VH_H1Ib 0.1042
+VH_H1Ib         1 2 0V
+.ends Sensado_y_Trf_Clarke_H1Ib
+
+.subckt Sensado_y_Trf_Clarke_H1Ic 1 2 3 4  
+H_H1Ic         3 4 VH_H1Ic 0.1042
+VH_H1Ic         1 2 0V
+.ends Sensado_y_Trf_Clarke_H1Ic
+
+**** RESUMING Temp..cir ****
+.END
+
+ERROR(ORPSIM-15108): Subcircuit INA126 used by X_U6 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INA126 used by X_U7 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INA126 used by X_U8 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INA126 used by X_U1 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INA126 used by X_U2 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INA126 used by X_U3 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OPA350 used by X_U4 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OPA350 used by X_U5-A is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OPA350 used by X_U5-B is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OPA350 used by X_U9 is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OPA350 used by X_U10-B is undefined
+
+ERROR(ORPSIM-15108): Subcircuit OPA350 used by X_U10-A is undefined
+
+ERROR(ORPSIM-15108): Subcircuit INA126 used by X_U11 is undefined
+
